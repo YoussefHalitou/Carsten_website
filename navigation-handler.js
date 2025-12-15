@@ -44,12 +44,19 @@
         
         if (!link || !link.href) return;
         
+        console.log('🖱️ Link clicked:', link.href);
+        
         // Check if link should be handled by AJAX
-        if (!shouldHandleLink(link)) return;
+        if (!shouldHandleLink(link)) {
+            console.log('⏭️ Allowing default navigation');
+            return;
+        }
         
         // Prevent default navigation
         e.preventDefault();
         e.stopPropagation();
+        
+        console.log('🚀 Starting AJAX navigation to:', link.href);
         
         // Navigate to the page
         navigateToPage(link.href);
@@ -61,33 +68,59 @@
     function shouldHandleLink(link) {
         const href = link.getAttribute('href');
         
-        if (!href) return false;
+        console.log('🔍 Checking link:', href);
         
-        // Don't handle external links
-        if (CONFIG.excludeLinks.some(prefix => href.startsWith(prefix) && !href.startsWith(window.location.origin))) {
+        if (!href) {
+            console.log('❌ No href');
             return false;
         }
         
         // Don't handle hash links (anchors)
         if (href.startsWith('#')) {
+            console.log('❌ Hash link');
             return false;
         }
         
         // Don't handle links with target="_blank"
         if (link.target === '_blank') {
+            console.log('❌ Target blank');
             return false;
         }
         
         // Don't handle downloads
         if (link.hasAttribute('download')) {
+            console.log('❌ Download link');
             return false;
         }
         
-        // Only handle same-origin links
+        // Don't handle mailto: and tel: links
+        if (href.startsWith('mailto:') || href.startsWith('tel:')) {
+            console.log('❌ Mailto/tel link');
+            return false;
+        }
+        
+        // Only handle same-origin links that are HTML pages
         try {
-            const linkUrl = new URL(href, window.location.origin);
-            return linkUrl.origin === window.location.origin && href.endsWith('.html');
+            const linkUrl = new URL(href, window.location.href);
+            const isHtmlPage = linkUrl.pathname.endsWith('.html') || linkUrl.pathname === '/' || linkUrl.pathname === '';
+            const isSameOrigin = linkUrl.origin === window.location.origin;
+            
+            console.log('Link analysis:', {
+                url: linkUrl.href,
+                pathname: linkUrl.pathname,
+                isHtmlPage,
+                isSameOrigin
+            });
+            
+            if (isSameOrigin && isHtmlPage) {
+                console.log('✅ Will handle with AJAX');
+                return true;
+            } else {
+                console.log('❌ External or non-HTML');
+                return false;
+            }
         } catch (e) {
+            console.log('❌ URL parse error:', e);
             return false;
         }
     }
@@ -96,9 +129,13 @@
      * Navigate to a new page using AJAX
      */
     async function navigateToPage(url) {
-        if (isLoading) return;
+        if (isLoading) {
+            console.log('⏸️ Already loading, skipping');
+            return;
+        }
         
         isLoading = true;
+        console.log('📡 Fetching page:', url);
         
         try {
             // Show loading state (optional)
@@ -112,22 +149,28 @@
             }
             
             const html = await response.text();
+            console.log('✅ Page fetched, length:', html.length);
             
             // Parse the HTML
             const parser = new DOMParser();
             const newDoc = parser.parseFromString(html, 'text/html');
+            console.log('📄 Page parsed, title:', newDoc.title);
             
             // Update the page
             updatePage(newDoc, url);
             
             // Update browser history
             window.history.pushState({ url: url }, '', url);
+            console.log('🔄 History updated');
             
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
             
+            console.log('✨ Navigation complete!');
+            
         } catch (error) {
-            console.error('Navigation error:', error);
+            console.error('❌ Navigation error:', error);
+            console.log('↩️ Falling back to normal navigation');
             // Fallback to normal navigation
             window.location.href = url;
         } finally {
@@ -140,24 +183,34 @@
      * Update page content without destroying chatbot
      */
     function updatePage(newDoc, url) {
+        console.log('🔄 Updating page content...');
+        
         // Update title
         document.title = newDoc.title;
+        console.log('📝 Title updated:', newDoc.title);
         
         // Update meta tags
         updateMetaTags(newDoc);
         
         // Save chatbot container reference
         const savedChatbot = chatbotContainer;
+        console.log('💬 Chatbot container saved:', savedChatbot ? 'Yes' : 'No');
         
-        // Get all body children except chatbot
+        // Get all body children except chatbot and scripts
         const currentContent = Array.from(document.body.children).filter(
-            el => el.id !== 'medical-chatbot-container'
+            el => el.id !== 'medical-chatbot-container' && el.tagName !== 'SCRIPT'
         );
+        console.log('🗑️ Removing elements:', currentContent.length);
         
-        // Get new content (everything except chatbot)
+        // Get new content (everything except chatbot and scripts that will be reloaded)
         const newContent = Array.from(newDoc.body.children).filter(
-            el => el.id !== 'medical-chatbot-container'
+            el => el.id !== 'medical-chatbot-container' && 
+                  !(el.tagName === 'SCRIPT' && (
+                      el.src.includes('navigation-handler.js') || 
+                      el.src.includes('script.js')
+                  ))
         );
+        console.log('➕ Adding elements:', newContent.length);
         
         // Fade out current content
         currentContent.forEach(el => {
@@ -179,6 +232,9 @@
             // Ensure chatbot is still at the end
             if (savedChatbot && !document.body.contains(savedChatbot)) {
                 document.body.appendChild(savedChatbot);
+                console.log('💬 Chatbot re-appended to body');
+            } else {
+                console.log('💬 Chatbot still in DOM');
             }
             
             // Reinitialize any scripts that need it
@@ -189,6 +245,7 @@
                 document.querySelectorAll('body > *:not(#medical-chatbot-container)').forEach(el => {
                     el.style.opacity = '1';
                 });
+                console.log('✨ Content faded in');
             }, 50);
             
         }, CONFIG.animationDuration);

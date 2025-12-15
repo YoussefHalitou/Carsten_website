@@ -261,6 +261,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- AJAX Navigation Handler for Persistent Chatbot -->
+    <script src="navigation-handler.js"></script>
 
     
     <!-- Medical Chatbot Widget - Embedded Frontend -->
@@ -268,7 +270,7 @@
     <div id="medical-chatbot-container" style="position: fixed; bottom: 0; right: 0; z-index: 9999; pointer-events: none;">
         <iframe 
           id="chatbot-iframe"
-          src="https://chatbotcarsten.live" 
+          src="https://chatbotcarsten.live?embedded=true&persistent=true" 
           style="
             width: 80px;
             height: 80px;

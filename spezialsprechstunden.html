@@ -207,7 +207,7 @@
         ></iframe>
       </div>
       
-      <!-- Script für automatisches Resizing des Chatbot-Widgets -->
+      <!-- Script für automatisches Resizing des Chatbot-Widgets mit State Persistence -->
       <script>
       (function() {
           'use strict';
@@ -224,9 +224,73 @@
           const CLOSED_WIDTH = '80px'; // Nur Button-Größe wenn geschlossen
           const OPEN_WIDTH = '420px'; // Breite wenn Chat geöffnet
           
-          // Initial: Geschlossen (nur Button sichtbar)
-          iframe.style.width = CLOSED_WIDTH;
-          iframe.style.height = CLOSED_HEIGHT;
+          // LocalStorage key für State Persistence
+          const CHATBOT_STATE_KEY = 'carsten-chatbot-state';
+          
+          // Funktion zum Speichern des Chatbot-States
+          function saveChatbotState(isOpen) {
+              try {
+                  localStorage.setItem(CHATBOT_STATE_KEY, JSON.stringify({
+                      isOpen: isOpen,
+                      timestamp: Date.now()
+                  }));
+              } catch (e) {
+                  console.warn('Could not save chatbot state:', e);
+              }
+          }
+          
+          // Funktion zum Laden des Chatbot-States
+          function loadChatbotState() {
+              try {
+                  const saved = localStorage.getItem(CHATBOT_STATE_KEY);
+                  if (saved) {
+                      const state = JSON.parse(saved);
+                      // State ist 24 Stunden gültig
+                      if (Date.now() - state.timestamp < 24 * 60 * 60 * 1000) {
+                          return state.isOpen;
+                      }
+                  }
+              } catch (e) {
+                  console.warn('Could not load chatbot state:', e);
+              }
+              return false; // Default: geschlossen
+          }
+          
+          // Funktion zum Anpassen der Iframe-Größe
+          function resizeIframe(isOpen) {
+              if (isOpen) {
+                  // Chat ist geöffnet - Widget-Größe
+                  iframe.style.height = OPEN_HEIGHT;
+                  iframe.style.width = OPEN_WIDTH;
+                  iframe.style.maxWidth = 'calc(100vw - 40px)'; // Responsive auf Mobile
+              } else {
+                  // Chat ist geschlossen - nur Button-Größe
+                  iframe.style.height = CLOSED_HEIGHT;
+                  iframe.style.width = CLOSED_WIDTH;
+                  iframe.style.maxWidth = 'none';
+              }
+          }
+          
+          // Gespeicherten State laden und anwenden
+          const savedState = loadChatbotState();
+          resizeIframe(savedState);
+          
+          // Wenn State "offen" war, sende Message an iframe nach dem Laden
+          if (savedState) {
+              iframe.addEventListener('load', function() {
+                  // Kurze Verzögerung, damit das iframe bereit ist
+                  setTimeout(function() {
+                      try {
+                          iframe.contentWindow.postMessage({
+                              source: 'parent-website',
+                              action: 'restore-open-state'
+                          }, 'https://chatbotcarsten.live');
+                      } catch (e) {
+                          console.warn('Could not send restore message to iframe:', e);
+                      }
+                  }, 500);
+              });
+          }
           
           // Listen for messages from the chatbot iframe
           window.addEventListener('message', function(event) {
@@ -234,21 +298,22 @@
               if (event.data && event.data.source === 'carsten-chatbot') {
                   const isOpen = event.data.type === 'open';
                   
+                  // State speichern
+                  saveChatbotState(isOpen);
+                  
                   // Resize iframe based on open/close state
-                  if (isOpen) {
-                      // Chat ist geöffnet - Widget-Größe
-                      iframe.style.height = OPEN_HEIGHT;
-                      iframe.style.width = OPEN_WIDTH;
-                      iframe.style.maxWidth = 'calc(100vw - 40px)'; // Responsive auf Mobile
-                  } else {
-                      // Chat ist geschlossen - nur Button-Größe
-                      iframe.style.height = CLOSED_HEIGHT;
-                      iframe.style.width = CLOSED_WIDTH;
-                      iframe.style.maxWidth = 'none';
-                  }
+                  resizeIframe(isOpen);
                   
                   console.log('Chatbot state changed:', isOpen ? 'open' : 'closed');
               }
+          });
+          
+          // Bei Page Unload den aktuellen State speichern
+          window.addEventListener('beforeunload', function() {
+              // Prüfe die aktuelle Größe des iframes
+              const currentHeight = iframe.style.height;
+              const isCurrentlyOpen = currentHeight === OPEN_HEIGHT;
+              saveChatbotState(isCurrentlyOpen);
           });
       })();
       </script>

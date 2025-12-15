@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "Hausarztpraxis Orchideenkamp - Vollständige Wissensdatenbank",
+    "version": "1.0",
+    "last_updated": "2025-12-13T04:56:20.416692",
+    "language": "de",
+    "practice_name": "Hausarztpraxis Orchideenkamp",
+    "doctor": "Dr. med. Carsten Schmidt"
+  },
+  "quick_info": {
+    "practice_name": "Hausarztpraxis Orchideenkamp",
+    "doctor": "Dr. med. Carsten Schmidt",
+    "phone": "(04488) 528140",
+    "address": "Neuer Bahnweg 11, 26655 Westerstede",
+    "emergency": {
+      "life_threatening": "112",
+      "medical": "116 117"
+    },
+    "hours": {
+      "weekdays": "Mo-Fr: 8:00-13:00 & 15:00-18:30",
+      "saturday": "Sa: 9:00-12:00",
+      "telemedicine": "Di: 16:30-18:30"
+    }
+  },
+  "services_overview": [
+    "Hausärztliche Versorgung",
+    "Diagnostik",
+    "Laboruntersuchungen",
+    "Vorsorgeuntersuchungen",
+    "Impfungen & Impfberatung",
+    "Reisemedizin",
+    "Atteste & Bescheinigungen",
+    "Telemedizin",
+    "Ernährungsberatung",
+    "Spezialsprechstunden"
+  ],
+  "team_count": 7,
+  "statistics": {
+    "years_experience": "15+",
+    "patients": "5000+",
+    "service_areas": "10+",
+    "commitment": "100%"
+  }
+}

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behandlungsräume - Hausarztpraxis Orchideenkamp</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .room-card {
+            background: var(--light);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border-top: 5px solid var(--accent);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 113, 227, 0.15);
+        }
+        
+        .room-card.clickable {
+            cursor: pointer;
+        }
+        
+        .room-card i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .room-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .room-card p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .room-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        
+        .room-card ul li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .room-card ul li:before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+        }
+        
+        .room-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-box {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(0, 113, 227, 0.1);
+        }
+        
+        .feature-box i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .feature-box h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .feature-box p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .room-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .room-link:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    Hausarztpraxis Orchideenkamp
+                    <small>Dr. med. Carsten Schmidt</small>
+                </a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="navMenu">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="index.html#leistungen">Leistungen</a></li>
+                <li><a href="index.html#praxis">Praxisrundgang</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+                <li><a href="team.html">Unser Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Detail Hero -->
+    <div class="detail-hero">
+        <div class="detail-hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Startseite</a>
+                <span>/</span>
+                <a href="index.html#praxis">Praxisrundgang</a>
+                <span>/</span>
+                <span>Behandlungsräume</span>
+            </div>
+            <h1>Behandlungsräume</h1>
+            <p>Moderne Ausstattung für optimale medizinische Versorgung</p>
+        </div>
+    </div>
+
+    <!-- Detail Content -->
+    <div class="detail-content">
+        <h3>Vielfältige Räume für alle Behandlungen</h3>
+        <p>
+            Unsere Praxis verfügt über mehrere spezialisierte Behandlungsräume, die optimal auf die verschiedenen medizinischen Anforderungen abgestimmt sind. Jeder Raum ist modern ausgestattet und bietet eine angenehme, professionelle Atmosphäre für Ihre Behandlung.
+        </p>
+
+        <p>
+            Von der ausführlichen Beratung im Sprechzimmer über diagnostische Untersuchungen bis hin zu kleineren Eingriffen – in unseren Behandlungsräumen sind Sie in besten Händen. Alle Räume sind hell, freundlich gestaltet und mit modernster medizinischer Technologie ausgestattet.
+        </p>
+
+        <h3>Unsere Behandlungsräume im Überblick</h3>
+        
+        <div class="room-grid">
+            <!-- Sprechzimmer 1 -->
+            <div class="room-card">
+                <img src="https://placehold.co/600x400/e8f4f8/0071e3?text=Sprechzimmer+1" alt="Sprechzimmer 1" class="room-image">
+                <i class="fas fa-user-md"></i>
+                <h3>Sprechzimmer 1</h3>
+                <p>
+                    Das erste Sprechzimmer ist optimal für ausführliche Beratungsgespräche und allgemeine Untersuchungen ausgestattet.
+                </p>
+                <ul>
+                    <li>Moderne Untersuchungsliege</li>
+                    <li>Digitale Patientenakte am Arbeitsplatz</li>
+                    <li>Medizinische Grundausstattung</li>
+                    <li>Ruhige, vertrauliche Atmosphäre</li>
+                    <li>Großer Schreibtisch für Gespräche</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <strong>Verwendung:</strong> Allgemeine Untersuchungen, Beratungsgespräche, Routinekontrollen, Impfungen
+                </p>
+            </div>
+
+            <!-- Sprechzimmer 2 -->
+            <div class="room-card">
+                <img src="https://placehold.co/600x400/e8f4f8/0071e3?text=Sprechzimmer+2" alt="Sprechzimmer 2" class="room-image">
+                <i class="fas fa-stethoscope"></i>
+                <h3>Sprechzimmer 2</h3>
+                <p>
+                    Das zweite Sprechzimmer bietet zusätzliche Kapazität für Untersuchungen und ermöglicht parallele Patientenbetreuung.
+                </p>
+                <ul>
+                    <li>Moderne Untersuchungsliege</li>
+                    <li>Digitale Patientenakte am Arbeitsplatz</li>
+                    <li>Medizinische Grundausstattung</li>
+                    <li>Ruhige, vertrauliche Atmosphäre</li>
+                    <li>Ausreichend Platz für Untersuchungen</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <strong>Verwendung:</strong> Allgemeine Untersuchungen, Beratungsgespräche, Routinekontrollen, kleinere Behandlungen
+                </p>
+            </div>
+
+             <!-- Verbandsraum 1 -->
+             <div class="room-card">
+                <img src="verbandsraum1.jpg" alt="Verbandsraum 1" class="room-image">
+                <i class="fas fa-band-aid"></i>
+                <h3>Verbandsraum 1</h3>
+                <p>
+                    Spezialisierter Raum für Wundversorgung, Verbandswechsel und kleinere medizinische Eingriffe.
+                </p>
+                <ul>
+                    <li>Steriler Arbeitsbereich</li>
+                    <li>Umfangreiches Verbandsmaterial</li>
+                    <li>Instrumente für kleine Eingriffe</li>
+                    <li>Moderne Wundversorgung</li>
+                    <li>Hygienische Ausstattung</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <strong>Verwendung:</strong> Wundversorgung, Verbandswechsel, Blutentnahmen, Injektionen
+                </p>
+            </div>
+
+            <!-- Verbandsraum 2 -->
+            <div class="room-card">
+                <img src="verbandsraum2.jpg" alt="Verbandsraum 2" class="room-image">
+                <i class="fas fa-syringe"></i>
+                <h3>Verbandsraum 2</h3>
+                <p>
+                    Zweiter Verbandsraum für parallele Behandlungen und zusätzliche Kapazität bei hohem Patientenaufkommen.
+                </p>
+                <ul>
+                    <li>Steriler Arbeitsbereich</li>
+                    <li>Umfangreiches Verbandsmaterial</li>
+                    <li>Instrumente für kleine Eingriffe</li>
+                    <li>Moderne Wundversorgung</li>
+                    <li>Hygienische Ausstattung</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <strong>Verwendung:</strong> Wundversorgung, Verbandswechsel, kleine chirurgische Eingriffe, Injektionen
+                </p>
+            </div>
+        
+            <!-- EKG-Raum -->
+            <div class="room-card clickable" onclick="window.location.href='ekg-raum.html'">
+                <img src="ekg.jpg" alt="EKG-Raum" class="room-image">
+                <i class="fas fa-heartbeat"></i>
+                <h3>EKG-Raum</h3>
+                <p>
+                    Speziell ausgestatteter Raum für alle Arten von Herzdiagnostik mit modernster EKG-Technologie.
+                </p>
+                <ul>
+                    <li>Hochmodernes EKG-Gerät</li>
+                    <li>Ergometer für Belastungs-EKG</li>
+                    <li>Langzeit-EKG-Geräte</li>
+                    <li>Sofortige digitale Auswertung</li>
+                    <li>Integrierter Waschbereich</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <strong>Verwendung:</strong> Ruhe-EKG, Belastungs-EKG, Langzeit-EKG, Herzdiagnostik
+                </p>
+                <a href="ekg-raum.html" class="room-link">
+                    Mehr erfahren →
+                </a>
+            </div>
+
+            <!-- Sonografie-Raum -->
+            <div class="room-card clickable" onclick="window.location.href='sonografie.html'">
+                <img src="sonografie.jpg" alt="Sonografie-Raum" class="room-image">
+                <i class="fas fa-laptop-medical"></i>
+                <h3>Sonografie-Raum</h3>
+                <p>
+                    Modernster Ultraschallraum für präzise bildgebende Diagnostik verschiedener Organe und Körperregionen.
+                </p>
+                <ul>
+                    <li>Hochauflösendes Ultraschallgerät</li>
+                    <li>Großer Monitor zur Bildbetrachtung</li>
+                    <li>Höhenverstellbare Untersuchungsliege</li>
+                    <li>Doppler-Sonografie möglich</li>
+                    <li>Digitale Bildspeicherung</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <strong>Verwendung:</strong> Abdomen-Sonografie, Schilddrüsen-Sonografie, Gefäß-Sonografie, Weichteil-Sonografie
+                </p>
+                <a href="sonografie.html" class="room-link">
+                    Mehr erfahren →
+                </a>
+            </div>
+        </div>
+
+        <h3>Gemeinsame Ausstattungsmerkmale</h3>
+        <p>
+            Alle unsere Behandlungsräume erfüllen höchste Standards in Bezug auf Hygiene, Funktionalität und Patientenkomfort. Folgende Merkmale zeichnen unsere Räume aus:
+        </p>
+
+        <div class="features-list">
+            <div class="feature-box">
+                <i class="fas fa-sun"></i>
+                <h4>Helle Räume</h4>
+                <p>Große Fenster und moderne LED-Beleuchtung sorgen für optimale Lichtverhältnisse</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-hand-sparkles"></i>
+                <h4>Höchste Hygiene</h4>
+                <p>Regelmäßige Desinfektion, sterile Arbeitsbereiche und moderne Hygienestandards</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-temperature-low"></i>
+                <h4>Klimatisiert</h4>
+                <p>Angenehme Raumtemperatur das ganze Jahr über durch moderne Klimatisierung</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-laptop"></i>
+                <h4>Digitalisiert</h4>
+                <p>Digitale Patientenakten und moderne IT-Ausstattung in allen Räumen</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-couch"></i>
+                <h4>Komfortabel</h4>
+                <p>Bequeme Untersuchungsliegen und ergonomische Möbel für Ihren Komfort</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Sicher</h4>
+                <p>Moderne medizinische Geräte mit regelmäßiger Wartung und Sicherheitsprüfung</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-volume-mute"></i>
+                <h4>Ruhig</h4>
+                <p>Schallisolierte Räume für ungestörte Untersuchungen und vertrauliche Gespräche</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-door-open"></i>
+                <h4>Barrierefrei</h4>
+                <p>Alle Räume sind ebenerdig und für Rollstuhlfahrer zugänglich</p>
+            </div>
+        </div>
+
+        <h3>Modernste medizinische Technologie</h3>
+        <p>
+            Wir investieren kontinuierlich in die neueste medizinische Technologie, um Ihnen die bestmögliche Diagnostik und Behandlung zu bieten. Unsere Geräte werden regelmäßig gewartet und entsprechen den aktuellen medizinischen Standards.
+        </p>
+
+        <p>
+            Die digitale Vernetzung aller Behandlungsräume ermöglicht einen schnellen Zugriff auf Ihre Patientendaten und Befunde. Dies spart Zeit und ermöglicht eine effiziente Behandlung. Alle Untersuchungsergebnisse werden digital dokumentiert und können bei Bedarf schnell mit Fachärzten oder Kliniken geteilt werden.
+        </p>
+
+        <h3>Hygiene & Sicherheit</h3>
+        <p>
+            Die Hygiene in unseren Behandlungsräumen hat oberste Priorität. Alle Räume werden nach jedem Patienten gründlich gereinigt und desinfiziert. Wir verwenden moderne Desinfektionsmittel und befolgen strenge Hygieneprotokolle.
+        </p>
+
+        <p>
+            Für Eingriffe und Behandlungen, die besondere Hygieneanforderungen stellen, verfügen wir über sterile Arbeitsbereiche und entsprechende Schutzausrüstung. Alle Instrumente werden nach den Richtlinien des Robert Koch-Instituts aufbereitet.
+        </p>
+
+        <div class="info-box">
+            <h3><i class="fas fa-user-check"></i> Ihre Privatsphäre ist geschützt</h3>
+            <p>
+                In allen unseren Behandlungsräumen wird Ihre Privatsphäre respektiert. Die Räume sind schallisoliert, sodass Gespräche vertraulich bleiben. Während der Untersuchung sind nur die notwendigen medizinischen Fachkräfte anwesend. Auf Wunsch kann eine Begleitperson bei der Untersuchung dabei sein.
+            </p>
+        </div>
+
+        <h3>Flexible Raumnutzung für optimale Versorgung</h3>
+        <p>
+            Durch unsere mehreren Behandlungsräume können wir mehrere Patienten gleichzeitig betreuen, ohne dass lange Wartezeiten entstehen. Die spezialisierte Ausstattung der einzelnen Räume ermöglicht es uns, verschiedene Untersuchungen und Behandlungen parallel durchzuführen.
+        </p>
+
+        <p>
+            Ob Sie zur Routineuntersuchung, zur Diagnostik oder zur Behandlung kommen – wir haben den passenden Raum mit der richtigen Ausstattung für Ihr Anliegen. Unser Team sorgt dafür, dass Sie sich in jedem unserer Behandlungsräume wohlfühlen und optimal versorgt werden.
+        </p>
+
+        <h3>Patientenkomfort steht im Mittelpunkt</h3>
+        <p>
+            Bei der Gestaltung unserer Behandlungsräume haben wir besonderen Wert auf Ihren Komfort gelegt. Die freundliche Farbgestaltung, die angenehme Beleuchtung und die moderne Einrichtung schaffen eine entspannte Atmosphäre, in der Sie sich wohlfühlen können.
+        </p>
+
+        <p>
+            Bequeme Untersuchungsliegen, ausreichend Ablageflächen für Ihre persönlichen Gegenstände und eine durchdachte Raumaufteilung tragen dazu bei, dass Ihr Besuch bei uns so angenehm wie möglich verläuft. Sollten Sie besondere Bedürfnisse haben, sprechen Sie uns gerne an – wir finden eine Lösung.
+        </p>
+
+        <h3>Qualität, die Sie spüren</h3>
+        <p>
+            Unsere Behandlungsräume spiegeln unseren Anspruch an Qualität und Professionalität wider. Von der Ausstattung über die Hygiene bis hin zur Atmosphäre – wir möchten, dass Sie sich bei uns in besten Händen fühlen. Ihr Wohlbefinden und Ihre Gesundheit stehen für uns an erster Stelle.
+        </p>
+
+        <div class="cta-section">
+            <h3>Weitere Praxisräume entdecken</h3>
+            <p>Lernen Sie auch unsere anderen modernen Räumlichkeiten kennen</p>
+            <a href="index.html#praxis" class="cta-button">Zurück zum Praxisrundgang</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hausarztpraxis Orchideenkamp</h4>
+                <p>Dr. med. Carsten Schmidt<br>
+                Neuer Bahnweg 11<br>
+                26655 Westerstede</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>Tel: (04488) 528140<br>
+                Fax: (04488) 5281429<br>
+                info@hausarztpraxis-orchideenkamp.de</p>
+            </div>
+            <div class="footer-section">
+                <h4>Sprechzeiten</h4>
+                <p>Mo-Fr: 8:00-13:00 & 15:00-18:30<br>
+                Sa: 9:00-12:00<br>
+                <small style="color: var(--accent);">Telemedizin Di: 16:30-18:30</small></p>
+            </div>
+            <div class="footer-section">
+                <h4>Rechtliches</h4>
+                <p><a href="impressum.html">Impressum</a><br>
+                <a href="datenschutz.html">Datenschutzerklärung</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Hausarztpraxis Orchideenkamp - Dr. med. Carsten Schmidt. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    
+    <!-- Medical Chatbot Widget - Embedded Frontend -->
+    <!-- Das Widget wird unten rechts auf der Website angezeigt -->
+    <div id="medical-chatbot-container" style="position: fixed; bottom: 0; right: 0; z-index: 9999; pointer-events: none;">
+        <iframe 
+          id="chatbot-iframe"
+          src="https://chatbotcarsten.live" 
+          style="
+            width: 80px;
+            height: 80px;
+            border: none;
+            background: transparent;
+            pointer-events: auto;
+          "
+          allow="microphone; camera"
+          title="Online-Rezeption Chatbot"
+          loading="lazy"
+        ></iframe>
+      </div>
+      
+      <!-- Script für automatisches Resizing des Chatbot-Widgets -->
+      <script>
+      (function() {
+          'use strict';
+          
+          const iframe = document.getElementById('chatbot-iframe');
+          if (!iframe) {
+              console.warn('Chatbot iframe not found');
+              return;
+          }
+          
+          // Größen definieren
+          const CLOSED_HEIGHT = '80px'; // Nur Button-Größe wenn geschlossen
+          const OPEN_HEIGHT = '690px'; // Höhe wenn Chat geöffnet
+          const CLOSED_WIDTH = '80px'; // Nur Button-Größe wenn geschlossen
+          const OPEN_WIDTH = '420px'; // Breite wenn Chat geöffnet
+          
+          // Initial: Geschlossen (nur Button sichtbar)
+          iframe.style.width = CLOSED_WIDTH;
+          iframe.style.height = CLOSED_HEIGHT;
+          
+          // Listen for messages from the chatbot iframe
+          window.addEventListener('message', function(event) {
+              // Check if message is from our chatbot
+              if (event.data && event.data.source === 'carsten-chatbot') {
+                  const isOpen = event.data.type === 'open';
+                  
+                  // Resize iframe based on open/close state
+                  if (isOpen) {
+                      // Chat ist geöffnet - Widget-Größe
+                      iframe.style.height = OPEN_HEIGHT;
+                      iframe.style.width = OPEN_WIDTH;
+                      iframe.style.maxWidth = 'calc(100vw - 40px)'; // Responsive auf Mobile
+                  } else {
+                      // Chat ist geschlossen - nur Button-Größe
+                      iframe.style.height = CLOSED_HEIGHT;
+                      iframe.style.width = CLOSED_WIDTH;
+                      iframe.style.maxWidth = 'none';
+                  }
+                  
+                  console.log('Chatbot state changed:', isOpen ? 'open' : 'closed');
+              }
+          });
+      })();
+      </script>
+
+</body> 
+</html>  

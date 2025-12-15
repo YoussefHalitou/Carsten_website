@@ -1,0 +1,523 @@
+================================================================================
+WISSENSDATENBANK: HAUSARZTPRAXIS ORCHIDEENKAMP
+================================================================================
+
+METADATA:
+Version: 1.0
+Sprache: de
+Letzte Aktualisierung: 2025-12-13T04:56:20.416692
+
+--------------------------------------------------------------------------------
+PRAXISINFORMATIONEN
+--------------------------------------------------------------------------------
+
+Name: Hausarztpraxis Orchideenkamp
+Motto: Ihre Gesundheit liegt uns am Herzen
+
+ADRESSE:
+  Neuer Bahnweg 11
+  26655 Westerstede
+  Deutschland
+
+KONTAKT:
+  Telefon: (04488) 528140
+  Fax: (04488) 5281429
+  E-Mail: info@hausarztpraxis-orchideenkamp.de
+
+ÖFFNUNGSZEITEN:
+  Montag-Freitag Vormittag: 8:00 - 13:00
+  Montag-Freitag Nachmittag: 15:00 - 18:30
+  Samstag: 9:00 - 12:00
+  Telemedizin: Dienstag 16:30 - 18:30
+
+NOTFALLNUMMERN:
+  Lebensbedrohlich: 112
+  Ärztlicher Bereitschaftsdienst: 116 117
+  Giftnotruf: 0551 19240
+
+STATISTIKEN:
+  Jahre Erfahrung: 15+
+  Patienten: 5000+
+  Leistungsbereiche: 10+
+  Engagement: 100%
+
+--------------------------------------------------------------------------------
+ARZT: DR. MED. CARSTEN SCHMIDT
+--------------------------------------------------------------------------------
+
+Titel: Facharzt für Allgemeinmedizin
+Erfahrung: Eigene Praxis in Westerstede seit April 2009
+
+QUALIFIKATIONEN:
+  - Facharzt für Allgemeinmedizin (seit 2009)
+  - Diplom-Biologe
+  - Dr. med. (Promotion: Magna cum laude)
+
+AUSBILDUNG:
+  - Biologiestudium: TU Braunschweig, Universität Oldenburg
+  - Diplom-Biologe (1992-1995): Note Sehr gut
+  - Studium Humanmedizin: Universität Göttingen
+  - Promotion: Dr. med. Magna cum laude
+
+ZUSATZQUALIFIKATIONEN:
+  - Notfallmedizin
+  - Ernährungsmedizin
+  - Verkehrsmedizin
+
+MEDIZINISCHER ANSATZ:
+  - Evidenzbasierte Medizin
+  - Persönliche Zuwendung und Zeit für Patienten
+  - Kombination aus modernster Technik und persönlicher Betreuung
+  - Wissenschaftliche Expertise durch biologischen Hintergrund
+  - Langfristige Patientenbeziehungen
+
+--------------------------------------------------------------------------------
+UNSER TEAM
+--------------------------------------------------------------------------------
+
+Dr. med. Carsten Schmidt - Praxisinhaber
+  Spezialisierungen:
+    - Allgemeinmedizin
+    - Notfallmedizin
+    - Ernährungsmedizin
+    - Verkehrsmedizin
+
+Sandra Müller - Medizinische Fachangestellte
+  Spezialisierungen:
+    - Terminverwaltung & Empfang
+    - Patientenbetreuung
+    - Blutentnahmen
+    - EKG & Lungenfunktion
+
+Julia Weber - Medizinische Fachangestellte
+  Spezialisierungen:
+    - Behandlungsassistenz
+    - Wundversorgung
+    - Impfungen
+    - Labor & Diagnostik
+
+Anna Schneider - Medizinische Fachangestellte
+  Spezialisierungen:
+    - Vorsorgeuntersuchungen
+    - Gesundheitsberatung
+    - DMP-Programme
+    - Patientenschulungen
+
+Petra Hoffmann - Praxismanagerin
+  Spezialisierungen:
+    - Praxisorganisation
+    - Abrechnungswesen
+    - Qualitätsmanagement
+    - Personalkoordination
+
+Lena Fischer - Auszubildende zur MFA (2. Lehrjahr)
+  Spezialisierungen:
+    - Empfang & Terminvergabe
+    - Patientenbetreuung
+    - Assistenz im Behandlungsraum
+    - Verwaltungsaufgaben
+
+Maria Rossi - Hygienebeauftragte & Reinigung
+  Spezialisierungen:
+    - Praxishygiene
+    - Desinfektion & Sterilisation
+    - Hygienestandards
+    - Materialverwaltung
+
+--------------------------------------------------------------------------------
+LEISTUNGEN
+--------------------------------------------------------------------------------
+
+
+### HAUSÄRZTLICHE VERSORGUNG
+Beschreibung: Erste Anlaufstelle für alle gesundheitlichen Fragen
+
+Umfasst:
+  - Diagnostik, Behandlung und Prävention akuter und chronischer Erkrankungen
+  - Koordination mit Fachärzten und Kliniken
+  - Umfassende Kenntnis Ihrer Krankengeschichte
+  - Hausbesuche bei Bedarf
+
+Spezifische Leistungen:
+  - Akutversorgung bei Erkältungen, Infektionen, Verletzungen, Schmerzen
+  - Chronische Krankheiten (Diabetes, Bluthochdruck, Asthma, COPD)
+  - Psychosomatische Grundversorgung
+  - Notfallmanagement
+  - Wundversorgung und kleine chirurgische Eingriffe
+  - Geriatrische Betreuung älterer Patienten
+  - Palliativmedizinische Betreuung
+  - DMP-Programme
+
+
+### DIAGNOSTIK
+Beschreibung: Moderne apparative Diagnostik direkt in unserer Praxis
+
+  EKG:
+    types: Ruhe-EKG, Belastungs-EKG auf Fahrrad-Ergometer
+    detects: Herzrhythmusstörungen, Durchblutungsstörungen des Herzens (Koronare Herzkrankheit)
+
+  SONOGRAPHIE:
+    areas: Bauchorgane, Schilddrüse, Lymphknoten, Gefäße, Weichteile und Gelenke
+
+  LANGZEIT_BLUTDRUCK:
+    description: 24-Stunden-Blutdruckmessung
+    purpose: Diagnose und Therapiekontrolle von Bluthochdruck
+
+  LUNGENFUNKTION:
+    type: Spirometrie
+    for: Asthma, COPD-Diagnose
+
+  WEITERE:
+
+
+### LABORUNTERSUCHUNGEN
+Beschreibung: Moderne Labordiagnostik mit schnellen Ergebnissen
+
+Routine-Labor:
+  - Großes und kleines Blutbild
+  - Blutzucker und HbA1c
+  - Cholesterin und Blutfettwerte
+  - Leber- und Nierenwerte
+  - Schilddrüsenwerte (TSH, fT3, fT4)
+  - Vitamine und Mineralstoffe
+  - Entzündungsparameter (CRP, BSG)
+
+Spezialdiagnostik:
+  - Hormonuntersuchungen
+  - Tumormarker
+  - Allergietests
+  - Covid-19 PCR- und Antigen-Tests
+
+Bearbeitungszeit: 1-3 Tage
+
+
+### VORSORGEUNTERSUCHUNGEN
+Beschreibung: Früherkennung ist der beste Schutz
+
+Programme:
+  check_up_35:
+    name: Check-up 35
+    frequency: Ab 35 Jahren alle 3 Jahre
+    covered_by: Gesetzliche Krankenversicherung
+    includes:
+      - Anamnese
+      - Körperliche Untersuchung
+      - Blutdruckmessung
+      - Bluttests
+      - Urintest
+  hautkrebs_screening:
+    name: Hautkrebs-Screening
+    frequency: Ab 35 Jahren alle 2 Jahre
+    type: Ganzkörperuntersuchung der Haut
+  krebs_frueherkennung:
+    - Darmkrebsvorsorge
+    - Prostatakrebsvorsorge (Männer ab 45)
+    - Brustkrebsvorsorge
+    - Gebärmutterhalskrebsvorsorge
+
+
+### IMPFUNGEN & IMPFBERATUNG
+Beschreibung: Umfassender Impfschutz für alle Altersgruppen
+
+Standardimpfungen:
+  - Tetanus
+  - Diphtherie
+  - Pertussis
+  - Poliomyelitis
+  - Masern, Mumps, Röteln (MMR)
+  - Meningokokken-Meningitis
+  - Hepatitis A und B
+  - Pneumokokken
+  - FSME
+  - Herpes Zoster
+  - HPV
+
+Saisonale Impfungen:
+  - Influenza (jährlich)
+  - Covid-19 (mRNA-Impfstoffe)
+
+Reiseimpfungen:
+  - Gelbfieber
+  - Typhus
+  - Tollwut
+  - Japanische Enzephalitis
+  - Dengue-Fieber
+  - Cholera
+  - Meningokokken ACWY
+
+
+### REISEMEDIZIN
+Beschreibung: Gesund auf Reisen
+
+Buchungszeit: 3-4 Monate vor Abreise
+
+Kosten: Private Abrechnung (teilweise Erstattung durch Krankenkassen)
+
+
+### ATTESTE & BESCHEINIGUNGEN
+Beschreibung: Medizinische Bescheinigungen für Sport, Beruf und Behörden
+
+Typen:
+  - Arbeitsunfähigkeitsbescheinigung
+  - Schulatteste und Sportbefreiungen
+  - Gesundheitszeugnisse für Führerschein
+  - Flugtauglichkeitsbescheinigungen
+  - Sporttauglichkeitsatteste
+  - Tauchuntersuchungen
+  - Bescheinigungen für Versicherungen
+  - Atteste für Behörden
+  - Pflegegradanträge
+  - Reha-Bescheinigungen
+
+Kosten: Private Abrechnung nach GOÄ
+
+
+### TELEMEDIZIN
+Beschreibung: Moderne Medizin von zu Hause
+
+Videosprechstunde:
+  Sprechzeiten: Dienstags 16:30-18:30
+  Voraussetzungen: Gerät mit Kamera und Internet
+  Geeignet für:
+    - Folgetermine
+    - Befundbesprechungen
+    - Therapiekontrollen
+    - Rezeptanfragen
+    - Krankschreibungen bei bekannten Erkrankungen
+    - Psychosomatische Gespräche
+
+E-Rezept:
+  Verfügbar: Ja
+  Vorteile:
+    - Kein Verlust
+    - Direkte Übermittlung
+    - App-verfügbar
+
+Einschränkungen:
+  - Keine Erstvorstellung neuer Patienten
+  - Keine akuten Notfälle
+  - Keine körperlichen Untersuchungen
+  - Keine Diagnostik (EKG, Ultraschall)
+  - Keine Impfungen und Blutentnahmen
+
+
+### ERNÄHRUNGSBERATUNG
+Beschreibung: Gesunde Ernährung für mehr Lebensqualität
+
+Bereiche:
+  - Gewichtsmanagement
+  - Ernährung bei chronischen Erkrankungen
+  - Nahrungsmittelunverträglichkeiten & Allergien
+  - Gesunde Ernährung im Alltag
+
+Erkrankungen:
+  - Diabetes mellitus
+  - Bluthochdruck
+  - Fettstoffwechselstörungen
+  - Gicht
+  - Nierenerkrankungen
+  - Magen-Darm-Erkrankungen
+  - Osteoporose
+
+Kosten: Bei ernährungsbedingten Erkrankungen teilweise Kassenleistung
+
+
+### SPEZIALSPRECHSTUNDEN
+Beschreibung: Spezialisierte Betreuung für besondere Bedürfnisse
+
+Typen:
+  diabetes:
+    services:
+      - Blutzuckeroptimierung
+      - Diabetes-Schulung
+      - Ernährungsberatung
+      - Folgeerkrankungen-Kontrolle
+      - Medikamentenanpassung
+      - DMP-Teilnahme
+      - Fußuntersuchungen
+  psychosomatik:
+    treats:
+      - Stressbedingte Beschwerden
+      - Chronische Schmerzen ohne organische Ursache
+      - Burnout
+      - Schlafstörungen
+      - Angststörungen
+      - Depressive Verstimmungen
+      - Psychosomatische Beschwerden
+  geriatrie:
+    services:
+      - Geriatrische Beurteilung
+      - Medikamentenmanagement
+      - Sturzprophylaxe
+      - Demenzdiagnostik
+      - Pflegegradanträge
+      - Palliativmedizin
+  dmp:
+    programs:
+      - Diabetes mellitus Typ 1 & 2
+      - Koronare Herzkrankheit (KHK)
+      - Asthma bronchiale
+      - COPD
+
+--------------------------------------------------------------------------------
+HÄUFIG GESTELLTE FRAGEN (FAQ)
+--------------------------------------------------------------------------------
+
+
+### ALLGEMEIN
+
+F: Brauche ich einen Termin?
+A: Ja, Termine werden empfohlen. Für akute Notfälle versuchen wir, Sie während der Sprechzeiten unterzubringen.
+
+F: Was soll ich zum ersten Termin mitbringen?
+A: Versichertenkarte, frühere medizinische Unterlagen, aktuelle Medikamentenliste, Impfpass (falls vorhanden).
+
+F: Nehmen Sie neue Patienten an?
+A: Ja, wir heißen neue Patienten willkommen. Bitte rufen Sie an, um einen Ersttermin zu vereinbaren.
+
+F: Machen Sie Hausbesuche?
+A: Ja, Hausbesuche sind für Patienten möglich, die aus gesundheitlichen Gründen nicht in die Praxis kommen können.
+
+
+### VERSICHERUNG
+
+F: Welche Versicherungen akzeptieren Sie?
+A: Wir akzeptieren alle gesetzlichen Krankenversicherungen und private Krankenversicherungen.
+
+F: Welche Leistungen sind privat zu bezahlen?
+A: Reisemedizinische Beratungen, Reiseimpfungen, medizinische Atteste, individuelle Gesundheitsleistungen (IGeL), teilweise Ernährungsberatung.
+
+
+### TELEMEDIZIN
+
+F: Wie funktioniert die Videosprechstunde?
+A: Termin für Dienstag 16:30-18:30 buchen, sicheren Video-Link erhalten, von Ihrem Gerät mit Kamera und Internet teilnehmen.
+
+F: Ist die Videosprechstunde sicher?
+A: Ja, alle Telemedizin-Dienste sind DSGVO-konform und verschlüsselt nach höchsten Sicherheitsstandards.
+
+
+### NOTFALL
+
+F: Was mache ich bei einem medizinischen Notfall außerhalb der Sprechzeiten?
+A: Rufen Sie 116 117 für ärztlichen Bereitschaftsdienst oder 112 für lebensbedrohliche Notfälle.
+
+F: Was ist ein medizinischer Notfall?
+A: Brustschmerzen, schwere Atemnot, plötzliche starke Blutung, Bewusstlosigkeit, Schlaganfall-Symptome.
+
+--------------------------------------------------------------------------------
+MEDIZINISCHE FACHARTIKEL
+--------------------------------------------------------------------------------
+
+Hauptartikel: Kann unser Darm uns steuern?
+Kategorie: Neurologie & Mikrobiom
+Datum: 2025-12-01
+Studie: Suzuki, T.A., Tanja, AS., Waters, J.L. et al. (2025). Nature Communications 16, 9482
+
+Kernaussagen:
+  - Verhalten kann über Mikrobiom weitergegeben werden
+  - Lactobacillus beeinflusst Aktivitätslevel
+  - Indolmilchsäure (ILA) aus Tryptophan-Abbau
+  - Mikrobiom als 'zweiter Erbgutstrang'
+  - Anpassung in wenigen Generationen statt Jahrtausenden
+
+Auswirkungen:
+  - Psychische Erkrankungen durch Bakterien behandeln
+  - Mikrobiom-Implantate gegen Angst, Depression, ADHS
+  - Ernährung als Verhaltenstherapie
+
+Weitere Artikel nach Kategorie:
+  KARDIOLOGIE:
+    - Neue Erkenntnisse zur Prävention von Herz-Kreislauf-Erkrankungen
+    - Bluthochdruck: Neue Grenzwerte und Behandlungsstrategien
+  DIABETES:
+    - GLP-1-Agonisten zeigen Langzeitwirkung
+    - Kontinuierliche Glukosemessung bei Typ-2-Diabetes
+  PRAEVENTION:
+    - Vitamin D und Immunfunktion
+    - Mediterrane Ernährung: Langzeitstudie
+  NEUROLOGIE:
+    - Früherkennung von Alzheimer: Neue Biomarker
+    - Mikrobiom und Verhalten
+
+Qualitätsmerkmale:
+  verstaendlich: Komplexe medizinische Fachsprache in einfache Sprache übersetzt
+  wissenschaftlich: Peer-reviewed Studien aus renommierten Fachzeitschriften
+  transparent: Vollständige Quellenangaben und Links
+
+--------------------------------------------------------------------------------
+DATENSCHUTZ
+--------------------------------------------------------------------------------
+
+VERANTWORTLICHER:
+  Name: Hausarztpraxis Orchideenkamp
+  Arzt: Dr. med. Carsten Schmidt
+  Adresse: Neuer Bahnweg 11, 26655 Westerstede
+  Telefon: (04488) 528140
+  E-Mail: info@hausarztpraxis-orchideenkamp.de
+
+PATIENTENRECHTE:
+  - Auskunft über gespeicherte Daten
+  - Berichtigung oder Löschung der Daten
+  - Einschränkung der Verarbeitung
+  - Datenübertragbarkeit
+  - Widerruf der Einwilligung
+  - Beschwerde bei Aufsichtsbehörde
+
+AUFSICHTSBEHÖRDE:
+  Name: Die Landesbeauftragte für den Datenschutz Niedersachsen
+  Adresse: Prinzenstraße 5, 30159 Hannover
+  Telefon: 0511 120-4500
+  E-Mail: poststelle@lfd.niedersachsen.de
+
+PATIENTENDATEN:
+  Schutz: Ärztliche Schweigepflicht gemäß § 203 StGB
+  Rechtsgrundlage: Art. 9 Abs. 2 lit. h DSGVO in Verbindung mit § 22 BDSG
+  Aufbewahrung: 10 Jahre nach Behandlungsabschluss gemäß § 630f BGB
+
+--------------------------------------------------------------------------------
+CHATBOT RICHTLINIEN
+--------------------------------------------------------------------------------
+
+Tonfall: Professionell aber freundlich, empathisch, patientenzentriert
+Sprache: Sie (formelle deutsche Anrede)
+
+PRIORITÄTEN:
+  - Kontaktdaten und Sprechzeiten
+  - Terminbuchungsprozess
+  - Notfallverfahren
+  - Häufige Leistungen
+  - Versicherungs- und Kosteninformationen
+
+ESKALATIONS-TRIGGER:
+  medical_emergency: Weiterleitung zu 112 oder 116 117
+  complex_medical: Empfehlung zur Terminbuchung
+  complaints: Weiterleitung zur Praxismanagerin
+  privacy: Verweis auf Datenschutzerklärung
+
+DARF NICHT BEREITGESTELLT WERDEN:
+  - Spezifische medizinische Diagnosen
+  - Rezeptempfehlungen ohne Konsultation
+  - Medizinische Beratung bei Notfällen
+  - Persönliche Gesundheitsinformationen ohne Verifizierung
+  - Rechts- oder Versicherungsberatung
+
+GESPRÄCHSBEISPIELE:
+
+  Szenario: Terminbuchung
+  Nutzer: Ich brauche einen Termin
+  Agent: Gerne helfe ich Ihnen bei der Terminvereinbarung mit Dr. Schmidt. Sie können uns unter (04488) 528140 während unserer Sprechzeiten anrufen: Montag bis Freitag 8:00-13:00 und 15:00-18:30, oder Samstag 9:00-12:00. Geht es um ein bestimmtes Anliegen oder eine Routineuntersuchung?
+
+
+  Szenario: Notfall
+  Nutzer: Ich habe starke Brustschmerzen
+  Agent: Das klingt nach einem medizinischen Notfall. Bitte rufen Sie sofort 112 an oder gehen Sie zur nächsten Notaufnahme. Warten Sie nicht.
+
+
+  Szenario: Impfung
+  Nutzer: Führen Sie Impfungen durch?
+  Agent: Ja, wir bieten alle von der STIKO empfohlenen Standardimpfungen an, einschließlich saisonaler Impfungen wie Grippe und COVID-19, sowie Reiseimpfungen. Möchten Sie einen Impftermin vereinbaren?
+
+================================================================================
+ENDE DER WISSENSDATENBANK
+================================================================================

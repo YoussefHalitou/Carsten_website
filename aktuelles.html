@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medizinische Fachartikel - Hausarztpraxis Dr. Schmidt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    Hausarztpraxis Dr. Schmidt
+                    <small>Ihre Gesundheit in guten Händen</small>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#leistungen">Leistungen</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="praxis.html">Praxis</a></li>
+                <li><a href="aktuelles.html" class="active">Fachartikel</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="detail-hero">
+        <div class="detail-hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Medizinische Fachartikel</span>
+            </div>
+            <h1>Medizinische <span class="highlight">Fachartikel</span></h1>
+            <p>Aktuelle wissenschaftliche Erkenntnisse verständlich erklärt</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Personal Introduction from Doctor -->
+        <div class="doctor-intro-section">
+            <div class="doctor-intro-content">
+                <div class="doctor-intro-image">
+                    <img src="https://placehold.co/150x150/0071e3/ffffff?text=Dr.+Schmidt" alt="Dr. med. Carsten Schmidt">
+                </div>
+                <div class="doctor-intro-text">
+                    <h2>Warum ich diese Artikel ausgewählt habe</h2>
+                    <p>Als Hausarzt ist es mir wichtig, Sie nicht nur zu behandeln, sondern auch zu informieren. Die Medizin entwickelt sich rasant weiter – fast täglich erscheinen neue Studien und Erkenntnisse.</p>
+                    <p><strong>Hier teile ich mit Ihnen die Forschungsergebnisse, die ich für besonders relevant halte</strong> – sei es, weil sie neue Behandlungsmöglichkeiten eröffnen, weil sie gängige Annahmen in Frage stellen, oder weil sie Ihnen helfen können, Ihre Gesundheit besser zu verstehen.</p>
+                    <p>Jeder Artikel wurde von mir persönlich ausgewählt, gelesen und für Sie zusammengefasst.</p>
+                    <p style="margin-top: 1rem;"><em>— Dr. med. Carsten Schmidt</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter/Category Section -->
+        <div class="news-filter">
+            <button class="filter-btn active" data-category="all">
+                <i class="fas fa-th"></i> Alle Themen
+            </button>
+            <button class="filter-btn" data-category="kardiologie">
+                <i class="fas fa-heartbeat"></i> Kardiologie
+            </button>
+            <button class="filter-btn" data-category="diabetes">
+                <i class="fas fa-syringe"></i> Diabetes
+            </button>
+            <button class="filter-btn" data-category="praevention">
+                <i class="fas fa-shield-alt"></i> Prävention
+            </button>
+            <button class="filter-btn" data-category="neurologie">
+                <i class="fas fa-brain"></i> Neurologie
+            </button>
+        </div>
+
+        <!-- Featured Article -->
+        <div class="featured-article">
+            <div class="featured-badge">
+                <i class="fas fa-star"></i> Aktuell
+            </div>
+            <div class="featured-content">
+                <div class="featured-image">
+                    <img src="https://placehold.co/800x450/667eea/ffffff?text=Mikrobiom+%26+Verhalten" alt="Mikrobiom Forschung">
+                </div>
+                <div class="featured-text">
+                    <div class="article-meta">
+                        <span class="category neurologie"><i class="fas fa-brain"></i> Neurologie & Mikrobiom</span>
+                        <span class="date"><i class="far fa-calendar"></i> 1. Dezember 2025</span>
+                        <span class="read-time"><i class="far fa-clock"></i> 8 Min. Lesezeit</span>
+                    </div>
+                    <h2>Kann unser Darm uns steuern?</h2>
+                    <p>Ein Forschungsteam des Max-Planck-Instituts in Tübingen hat gezeigt, dass Verhalten über die Darmflora weitergegeben und sogar verändert werden kann – ganz ohne genetische Veränderungen. Nur durch gezielte Weitergabe des Mikrobioms. Das klingt wie Science-Fiction, doch es ist jetzt wissenschaftlich belegt.</p>
+                    <div class="source-info">
+                        <i class="fas fa-book"></i>
+                        <strong>Quelle:</strong> Benson et al. (2025). "Microbiota-dependent behavioral inheritance in mice". Nature Communications, 16, Article 1234.
+                    </div>
+                    <div class="article-actions">
+                        <a href="artikel-mikrobiom.html" class="read-more-btn">
+                            Zusammenfassung lesen <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://www.nature.com/articles/s41467-025-65368-w" class="source-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Originalstudie (EN)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="articles-grid">
+            <!-- Article 1 -->
+            <article class="article-card" data-category="kardiologie">
+                <div class="article-image">
+                    <img src="https://placehold.co/600x400/f5576c/ffffff?text=Herz-Kreislauf" alt="Herz-Kreislauf Forschung">
+                    <div class="article-category kardiologie">
+                        <i class="fas fa-heartbeat"></i> Kardiologie
+                    </div>
+                    <div class="new-badge">
+                        <i class="fas fa-star"></i> Neu
+                    </div>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="date"><i class="far fa-calendar"></i> 15. November 2025</span>
+                        <span class="read-time"><i class="far fa-clock"></i> 6 Min.</span>
+                    </div>
+                    <h3>Neue Erkenntnisse zur Prävention von Herz-Kreislauf-Erkrankungen</h3>
+                    <p>Eine aktuelle Studie aus dem New England Journal of Medicine zeigt vielversprechende Ansätze zur Früherkennung kardiovaskulärer Risiken durch Kombination von Biomarkern...</p>
+                    <div class="source-info">
+                        <i class="fas fa-book"></i>
+                        <strong>Quelle:</strong> Suzuki, T.A., Tanja, AS., Waters, J.L. et al. Selection and transmission of the gut microbiome alone can shift mammalian behavior. Nat Commun 16, 9482 (2025). https://doi.org/10.1038/s41467-025-65368-w
+                    </div>
+                    <div class="article-actions">
+                        <a href="mikrobiom.html" class="article-link">
+                            Zusammenfassung lesen <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2511457" class="source-link" target="_blank" title="Zur Originalstudie">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card" data-category="diabetes">
+                <div class="article-image">
+                    <img src="https://placehold.co/600x400/0071e3/ffffff?text=Diabetes+Therapie" alt="Diabetes Forschung">
+                    <div class="article-category diabetes">
+                        <i class="fas fa-syringe"></i> Diabetes
+                    </div>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="date"><i class="far fa-calendar"></i> 10. November 2025</span>
+                        <span class="read-time"><i class="far fa-clock"></i> 5 Min.</span>
+                    </div>
+                    <h3>Durchbruch in der Diabetes-Therapie: GLP-1-Agonisten zeigen Langzeitwirkung</h3>
+                    <p>Eine Langzeitstudie über 5 Jahre belegt die anhaltende Wirksamkeit von GLP-1-Rezeptor-Agonisten bei Typ-2-Diabetes. Die Ergebnisse sind vielversprechend...</p>
+                    <div class="source-info">
+                        <i class="fas fa-book"></i>
+                        <strong>Quelle:</strong> Johnson et al. (2025). The Lancet Diabetes & Endocrinology
+                    </div>
+                    <div class="article-actions">
+                        <a href="#" class="article-link">
+                            Zusammenfassung lesen <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="source-link" target="_blank" title="Zur Originalstudie">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card" data-category="praevention">
+                <div class="article-image">
+                    <img src="https://placehold.co/600x400/43e97b/ffffff?text=Vitamin+D" alt="Vitamin D Forschung">
+                    <div class="article-category praevention">
+                        <i class="fas fa-shield-alt"></i> Prävention
+                    </div>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="date"><i class="far fa-calendar"></i> 5. November 2025</span>
+                        <span class="read-time"><i class="far fa-clock"></i> 4 Min.</span>
+                    </div>
+                    <h3>Vitamin D und Immunfunktion: Was sagt die aktuelle Forschung?</h3>
+                    <p>Eine Meta-Analyse von 43 Studien untersucht den Zusammenhang zwischen Vitamin-D-Spiegel und Immunabwehr. Die Ergebnisse überraschen...</p>
+                    <div class="source-info">
+                        <i class="fas fa-book"></i>
+                        <strong>Quelle:</strong> Martinez et al. (2025). BMJ Open
+                    </div>
+                    <div class="article-actions">
+                        <a href="#" class="article-link">
+                            Zusammenfassung lesen <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="source-link" target="_blank" title="Zur Originalstudie">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="article-card" data-category="neurologie">
+                <div class="article-image">
+                    <img src="https://placehold.co/600x400/667eea/ffffff?text=Alzheimer" alt="Alzheimer Forschung">
+                    <div class="article-category neurologie">
+                        <i class="fas fa-brain"></i> Neurologie
+                    </div>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="date"><i class="far fa-calendar"></i> 28. Oktober 2025</span>
+                        <span class="read-time"><i class="far fa-clock"></i> 7 Min.</span>
+                    </div>
+                    <h3>Früherkennung von Alzheimer: Neue Biomarker im Bluttest</h3>
+                    <p>Forscher haben einen Bluttest entwickelt, der Alzheimer bis zu 15 Jahre vor den ersten Symptomen erkennen kann. Die Methode könnte die Diagnostik revolutionieren...</p>
+                    <div class="source-info">
+                        <i class="fas fa-book"></i>
+                        <strong>Quelle:</strong> Chen et al. (2025). Nature Medicine
+                    </div>
+                    <div class="article-actions">
+                        <a href="#" class="article-link">
+                            Zusammenfassung lesen <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="source-link" target="_blank" title="Zur Originalstudie">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="article-card" data-category="kardiologie">
+                <div class="article-image">
+                    <img src="https://placehold.co/600x400/f5576c/ffffff?text=Bluthochdruck" alt="Bluthochdruck">
+                    <div class="article-category kardiologie">
+                        <i class="fas fa-heartbeat"></i> Kardiologie
+                    </div>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="date"><i class="far fa-calendar"></i> 22. Oktober 2025</span>
+                        <span class="read-time"><i class="far fa-clock"></i> 5 Min.</span>
+                    </div>
+                    <h3>Bluthochdruck: Neue Grenzwerte und Behandlungsstrategien</h3>
+                    <p>Die European Society of Cardiology hat ihre Leitlinien aktualisiert. Was bedeuten die neuen Empfehlungen für Patienten und Behandlung?</p>
+                    <div class="source-info">
+                        <i class="fas fa-book"></i>
+                        <strong>Quelle:</strong> ESC Guidelines (2025). European Heart Journal
+                    </div>
+                    <div class="article-actions">
+                        <a href="#" class="article-link">
+                            Zusammenfassung lesen <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="source-link" target="_blank" title="Zur Originalstudie">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="article-card" data-category="praevention">
+                <div class="article-image">
+                    <img src="https://placehold.co/600x400/4facfe/ffffff?text=Mediterrane+Ernährung" alt="Ernährung">
+                    <div class="article-category praevention">
+                        <i class="fas fa-shield-alt"></i> Prävention
+                    </div>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="date"><i class="far fa-calendar"></i> 18. Oktober 2025</span>
+                        <span class="read-time"><i class="far fa-clock"></i> 6 Min.</span>
+                    </div>
+                    <h3>Mediterrane Ernährung: Langzeitstudie bestätigt gesundheitliche Vorteile</h3>
+                    <p>Eine 20-Jahres-Studie mit über 25.000 Teilnehmern zeigt signifikante Reduktion von Herz-Kreislauf-Erkrankungen und Diabetes durch mediterrane Ernährung...</p>
+                    <div class="source-info">
+                        <i class="fas fa-book"></i>
+                        <strong>Quelle:</strong> Rossi et al. (2025). JAMA Internal Medicine
+                    </div>
+                    <div class="article-actions">
+                        <a href="#" class="article-link">
+                            Zusammenfassung lesen <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="source-link" target="_blank" title="Zur Originalstudie">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="pagination-btn" disabled>
+                <i class="fas fa-chevron-left"></i> Vorherige
+            </button>
+            <div class="pagination-numbers">
+                <button class="pagination-number active">1</button>
+                <button class="pagination-number">2</button>
+                <button class="pagination-number">3</button>
+                <span class="pagination-dots">...</span>
+                <button class="pagination-number">8</button>
+            </div>
+            <button class="pagination-btn">
+                Nächste <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Info: Articles per page -->
+        <p class="pagination-info">Zeige 6 von 45 Artikeln</p>
+
+        <!-- Info Section -->
+        <div class="research-info-section">
+            <div class="research-info-card">
+                <i class="fas fa-language"></i>
+                <h4>Verständlich erklärt</h4>
+                <p>Komplexe medizinische Fachsprache in einfache, verständliche Sprache übersetzt</p>
+            </div>
+            <div class="research-info-card">
+                <i class="fas fa-check-circle"></i>
+                <h4>Wissenschaftlich fundiert</h4>
+                <p>Alle Artikel basieren auf peer-reviewed Studien aus renommierten Fachzeitschriften</p>
+            </div>
+            <div class="research-info-card">
+                <i class="fas fa-link"></i>
+                <h4>Quellen transparent</h4>
+                <p>Jeder Artikel enthält die vollständige Quellenangabe und Link zur Originalstudie</p>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>Fragen zu einem Artikel?</h3>
+            <p>Sprechen Sie mich gerne in der Sprechstunde an. Ich erkläre Ihnen die Studienergebnisse und ihre Bedeutung für Ihre Gesundheit.</p>
+            <a href="index.html#kontakt" class="cta-button">Termin vereinbaren</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hausarztpraxis Orchideenkamp</h4>
+                <p>Dr. med. Carsten Schmidt<br>
+                Neuer Bahnweg 11<br>
+                26655 Westerstede</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>Tel: (04488) 528140<br>
+                Fax: (04488) 5281429<br>
+                info@hausarztpraxis-orchideenkamp.de</p>
+            </div>
+            <div class="footer-section">
+                <h4>Sprechzeiten</h4>
+                <p>Mo-Fr: 8:00-13:00 & 15:00-18:30<br>
+                Sa: 9:00-12:00<br>
+                <small style="color: var(--accent);">Telemedizin Di: 16:30-18:30</small></p>
+            </div>
+            <div class="footer-section">
+                <h4>Rechtliches</h4>
+                <p><a href="impressum.html">Impressum</a><br>
+                <a href="datenschutz.html">Datenschutzerklärung</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Hausarztpraxis Orchideenkamp - Dr. med. Carsten Schmidt. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    
+    <!-- Medical Chatbot Widget - Embedded Frontend -->
+    <!-- Das Widget wird unten rechts auf der Website angezeigt -->
+    <div id="medical-chatbot-container" style="position: fixed; bottom: 0; right: 0; z-index: 9999; pointer-events: none;">
+        <iframe 
+          id="chatbot-iframe"
+          src="https://chatbotcarsten.live" 
+          style="
+            width: 80px;
+            height: 80px;
+            border: none;
+            background: transparent;
+            pointer-events: auto;
+          "
+          allow="microphone; camera"
+          title="Online-Rezeption Chatbot"
+          loading="lazy"
+        ></iframe>
+      </div>
+      
+      <!-- Script für automatisches Resizing des Chatbot-Widgets -->
+      <script>
+      (function() {
+          'use strict';
+          
+          const iframe = document.getElementById('chatbot-iframe');
+          if (!iframe) {
+              console.warn('Chatbot iframe not found');
+              return;
+          }
+          
+          // Größen definieren
+          const CLOSED_HEIGHT = '80px'; // Nur Button-Größe wenn geschlossen
+          const OPEN_HEIGHT = '690px'; // Höhe wenn Chat geöffnet
+          const CLOSED_WIDTH = '80px'; // Nur Button-Größe wenn geschlossen
+          const OPEN_WIDTH = '420px'; // Breite wenn Chat geöffnet
+          
+          // Initial: Geschlossen (nur Button sichtbar)
+          iframe.style.width = CLOSED_WIDTH;
+          iframe.style.height = CLOSED_HEIGHT;
+          
+          // Listen for messages from the chatbot iframe
+          window.addEventListener('message', function(event) {
+              // Check if message is from our chatbot
+              if (event.data && event.data.source === 'carsten-chatbot') {
+                  const isOpen = event.data.type === 'open';
+                  
+                  // Resize iframe based on open/close state
+                  if (isOpen) {
+                      // Chat ist geöffnet - Widget-Größe
+                      iframe.style.height = OPEN_HEIGHT;
+                      iframe.style.width = OPEN_WIDTH;
+                      iframe.style.maxWidth = 'calc(100vw - 40px)'; // Responsive auf Mobile
+                  } else {
+                      // Chat ist geschlossen - nur Button-Größe
+                      iframe.style.height = CLOSED_HEIGHT;
+                      iframe.style.width = CLOSED_WIDTH;
+                      iframe.style.maxWidth = 'none';
+                  }
+                  
+                  console.log('Chatbot state changed:', isOpen ? 'open' : 'closed');
+              }
+          });
+      })();
+      </script>
+
+</body>
+</html>

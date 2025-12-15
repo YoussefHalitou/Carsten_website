@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unser Team - Hausarztpraxis Orchideenkamp</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .team-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .team-intro h2 {
+            font-size: 2.5rem;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .team-intro p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Arzt Section - Dezenter */
+        .doctor-section {
+            background: var(--light);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+            border-left: 5px solid var(--accent);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .doctor-content {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .doctor-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .doctor-info h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .doctor-info .title {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .doctor-info p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .qualifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .qualification-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .qualification-item:hover {
+            border-color: var(--accent);
+            box-shadow: 0 5px 15px rgba(0, 113, 227, 0.1);
+        }
+
+        .qualification-item i {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+            color: var(--accent);
+        }
+
+        .qualification-item strong {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+            color: var(--text);
+        }
+
+        .qualification-item span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
+        }
+
+        .team-card {
+            background: var(--light);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 113, 227, 0.15);
+        }
+
+        .team-card-image {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #e8f4f8 0%, #d1e9f6 100%);
+        }
+
+        .team-card-content {
+            padding: 2rem;
+        }
+
+        .team-card-content h3 {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-card-content .position {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .team-card-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .team-card-content .specialties {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .team-card-content .specialties li {
+            padding: 0.4rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .team-card-content .specialties li i {
+            color: var(--accent);
+            margin-right: 0.75rem;
+            font-size: 0.8rem;
+        }
+
+        .team-section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--text);
+            margin: 4rem 0 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .team-section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .team-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 3rem 0;
+            background: var(--light);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+        }
+
+        .value-box {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .value-box i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .value-box h4 {
+            font-size: 1.3rem;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+
+        .value-box p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .doctor-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .doctor-image {
+                margin: 0 auto;
+            }
+
+            .qualifications {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    Hausarztpraxis Orchideenkamp
+                    <small>Dr. med. Carsten Schmidt</small>
+                </a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="navMenu">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="index.html#leistungen">Leistungen</a></li>
+                <li><a href="index.html#praxis">Praxisrundgang</a></li>
+                <li><a href="team.html" class="active">Unser Team</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Detail Hero -->
+    <div class="detail-hero">
+        <div class="detail-hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Startseite</a>
+                <span>/</span>
+                <span>Unser Team</span>
+            </div>
+            <h1>Unser Team</h1>
+            <p>Erfahrene Fachkräfte für Ihre Gesundheit</p>
+        </div>
+    </div>
+
+    <!-- Detail Content -->
+    <div class="detail-content">
+        <div class="team-intro">
+            <h2>Herzlich willkommen bei unserem Team</h2>
+            <p>
+                Wir sind ein engagiertes Team aus erfahrenen Fachkräften, das sich mit Leidenschaft und Kompetenz um Ihre Gesundheit kümmert. Jedes Teammitglied bringt seine individuellen Stärken und Fachkenntnisse ein, um Ihnen die bestmögliche medizinische Versorgung zu bieten.
+            </p>
+        </div>
+
+        <!-- Arzt Section -->
+        <div class="doctor-section">
+            <div class="doctor-content">
+                <img src="https://placehold.co/280x280/e8f4f8/0071e3?text=Dr.+Schmidt" alt="Dr. med. Carsten Schmidt" class="doctor-image">
+                <div class="doctor-info">
+                    <h2>Dr. med. Carsten Schmidt</h2>
+                    <div class="title">Facharzt für Allgemeinmedizin</div>
+                    <p>
+                        Als Ihr Hausarzt liegt mir Ihre Gesundheit besonders am Herzen. Mit über 15 Jahren Erfahrung in der Allgemeinmedizin begleite ich Sie und Ihre Familie durch alle Lebensphasen – von der Vorsorge über die Akutbehandlung bis zur Nachsorge.
+                    </p>
+                    <p>
+                        Mein Ziel ist es, eine vertrauensvolle Arzt-Patienten-Beziehung aufzubauen und Sie ganzheitlich zu betreuen. Dabei setze ich auf eine Kombination aus modernster Medizin und persönlicher Zuwendung.
+                    </p>
+                    
+                    <div class="qualifications">
+                        <div class="qualification-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <strong>Studium</strong>
+                            <span>Medizinische Hochschule Hannover</span>
+                        </div>
+                        <div class="qualification-item">
+                            <i class="fas fa-certificate"></i>
+                            <strong>Facharzt</strong>
+                            <span>Allgemeinmedizin seit 2010</span>
+                        </div>
+                        <div class="qualification-item">
+                            <i class="fas fa-heartbeat"></i>
+                            <strong>Zusatzqualifikation</strong>
+                            <span>Notfallmedizin</span>
+                        </div>
+                        <div class="qualification-item">
+                            <i class="fas fa-user-md"></i>
+                            <strong>Zusatzqualifikation</strong>
+                            <span>Sportmedizin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="team-section-title">Unser Praxisteam</h2>
+
+        <!-- Team Grid -->
+        <div class="team-grid">
+            <!-- MFA 1 -->
+            <div class="team-card">
+                <img src="https://placehold.co/400x320/e8f4f8/0071e3?text=Sandra+M%C3%BCller" alt="Sandra Müller" class="team-card-image">
+                <div class="team-card-content">
+                    <h3>Sandra Müller</h3>
+                    <span class="position">Medizinische Fachangestellte</span>
+                    <p>
+                        Als erfahrene MFA bin ich Ihre erste Ansprechpartnerin am Empfang und koordiniere Ihre Termine. Mit meiner freundlichen Art sorge ich dafür, dass Sie sich von Anfang an gut aufgehoben fühlen.
+                    </p>
+                    <ul class="specialties">
+                        <li><i class="fas fa-check-circle"></i> Terminverwaltung & Empfang</li>
+                        <li><i class="fas fa-check-circle"></i> Patientenbetreuung</li>
+                        <li><i class="fas fa-check-circle"></i> Blutentnahmen</li>
+                        <li><i class="fas fa-check-circle"></i> EKG & Lungenfunktion</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MFA 2 -->
+            <div class="team-card">
+                <img src="https://placehold.co/400x320/e8f4f8/0071e3?text=Julia+Weber" alt="Julia Weber" class="team-card-image">
+                <div class="team-card-content">
+                    <h3>Julia Weber</h3>
+                    <span class="position">Medizinische Fachangestellte</span>
+                    <p>
+                        Ich unterstütze Dr. Schmidt bei allen Untersuchungen und Behandlungen. Besonders wichtig ist mir, dass Sie sich während Ihres Besuchs wohl und sicher fühlen.
+                    </p>
+                    <ul class="specialties">
+                        <li><i class="fas fa-check-circle"></i> Assistenz bei Behandlungen</li>
+                        <li><i class="fas fa-check-circle"></i> Wundversorgung</li>
+                        <li><i class="fas fa-check-circle"></i> Impfungen</li>
+                        <li><i class="fas fa-check-circle"></i> Labor & Diagnostik</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MFA 3 -->
+            <div class="team-card">
+                <img src="https://placehold.co/400x320/e8f4f8/0071e3?text=Anna+Schneider" alt="Anna Schneider" class="team-card-image">
+                <div class="team-card-content">
+                    <h3>Anna Schneider</h3>
+                    <span class="position">Medizinische Fachangestellte</span>
+                    <p>
+                        Als Spezialistin für Prävention und Vorsorge berate ich Sie gerne zu allen Gesundheitsthemen. Ich koordiniere unsere Vorsorgeprogramme und Gesundheitschecks.
+                    </p>
+                    <ul class="specialties">
+                        <li><i class="fas fa-check-circle"></i> Vorsorgeuntersuchungen</li>
+                        <li><i class="fas fa-check-circle"></i> Gesundheitsberatung</li>
+                        <li><i class="fas fa-check-circle"></i> DMP-Programme</li>
+                        <li><i class="fas fa-check-circle"></i> Patientenschulungen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Praxismanagerin -->
+            <div class="team-card">
+                <img src="https://placehold.co/400x320/e8f4f8/0071e3?text=Petra+Hoffmann" alt="Petra Hoffmann" class="team-card-image">
+                <div class="team-card-content">
+                    <h3>Petra Hoffmann</h3>
+                    <span class="position">Praxismanagerin</span>
+                    <p>
+                        Ich sorge dafür, dass in unserer Praxis alles reibungslos läuft. Von der Organisation bis zur Abrechnung – ich kümmere mich um alle administrativen Belange im Hintergrund.
+                    </p>
+                    <ul class="specialties">
+                        <li><i class="fas fa-check-circle"></i> Praxisorganisation</li>
+                        <li><i class="fas fa-check-circle"></i> Abrechnungswesen</li>
+                        <li><i class="fas fa-check-circle"></i> Qualitätsmanagement</li>
+                        <li><i class="fas fa-check-circle"></i> Personalkoordination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Auszubildende -->
+            <div class="team-card">
+                <img src="https://placehold.co/400x320/e8f4f8/0071e3?text=Lena+Fischer" alt="Lena Fischer" class="team-card-image">
+                <div class="team-card-content">
+                    <h3>Lena Fischer</h3>
+                    <span class="position">Auszubildende zur MFA (2. Lehrjahr)</span>
+                    <p>
+                        Als Auszubildende lerne ich täglich dazu und freue mich, Sie bei Ihrem Praxisbesuch zu unterstützen. Mit Engagement und Freude bin ich für Sie da.
+                    </p>
+                    <ul class="specialties">
+                        <li><i class="fas fa-check-circle"></i> Empfang & Terminvergabe</li>
+                        <li><i class="fas fa-check-circle"></i> Patientenbetreuung</li>
+                        <li><i class="fas fa-check-circle"></i> Assistenz im Behandlungsraum</li>
+                        <li><i class="fas fa-check-circle"></i> Verwaltungsaufgaben</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Reinigungskraft -->
+            <div class="team-card">
+                <img src="https://placehold.co/400x320/e8f4f8/0071e3?text=Maria+Rossi" alt="Maria Rossi" class="team-card-image">
+                <div class="team-card-content">
+                    <h3>Maria Rossi</h3>
+                    <span class="position">Hygienebeauftragte & Reinigung</span>
+                    <p>
+                        Ich sorge dafür, dass unsere Praxis stets sauber und hygienisch einwandfrei ist. Die Gesundheit und Sicherheit unserer Patienten hat für mich oberste Priorität.
+                    </p>
+                    <ul class="specialties">
+                        <li><i class="fas fa-check-circle"></i> Praxishygiene</li>
+                        <li><i class="fas fa-check-circle"></i> Desinfektion & Sterilisation</li>
+                        <li><i class="fas fa-check-circle"></i> Hygienestandards</li>
+                        <li><i class="fas fa-check-circle"></i> Materialverwaltung</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="team-section-title">Unsere Werte</h2>
+
+        <div class="team-values">
+            <div class="value-box">
+                <i class="fas fa-heart"></i>
+                <h4>Empathie</h4>
+                <p>Wir nehmen uns Zeit für Sie und begegnen Ihnen mit Verständnis und Mitgefühl</p>
+            </div>
+
+            <div class="value-box">
+                <i class="fas fa-user-shield"></i>
+                <h4>Vertrauen</h4>
+                <p>Ihre Gesundheit und Privatsphäre sind bei uns in besten Händen</p>
+            </div>
+
+            <div class="value-box">
+                <i class="fas fa-award"></i>
+                <h4>Kompetenz</h4>
+                <p>Regelmäßige Fortbildungen garantieren höchste medizinische Standards</p>
+            </div>
+
+            <div class="value-box">
+                <i class="fas fa-users"></i>
+                <h4>Teamgeist</h4>
+                <p>Gemeinsam arbeiten wir Hand in Hand für Ihre optimale Versorgung</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3><i class="fas fa-graduation-cap"></i> Kontinuierliche Weiterbildung</h3>
+            <p>
+                Unser gesamtes Team nimmt regelmäßig an Fortbildungen teil, um immer auf dem neuesten Stand der medizinischen Entwicklungen zu sein. Wir investieren in unsere Kompetenzen, damit Sie von der bestmöglichen Behandlung profitieren können.
+            </p>
+            <p style="margin-top: 1rem;">
+                Darüber hinaus sind wir als Ausbildungspraxis zertifiziert und geben unser Wissen gerne an die nächste Generation weiter. Die Ausbildung junger Fachkräfte liegt uns besonders am Herzen.
+            </p>
+        </div>
+
+        <h3>Warum unser Team besonders ist</h3>
+        <p>
+            Was unser Team auszeichnet, ist nicht nur die fachliche Kompetenz, sondern vor allem die herzliche und persönliche Atmosphäre. Wir kennen viele unserer Patienten seit Jahren und schätzen das Vertrauen, das Sie uns entgegenbringen.
+        </p>
+
+        <p>
+            Jedes Teammitglied bringt seine individuellen Stärken ein und trägt dazu bei, dass Sie sich bei uns wohlfühlen. Ob am Empfang, im Behandlungszimmer oder bei der Organisation im Hintergrund – wir arbeiten Hand in Hand für Ihre Gesundheit.
+        </p>
+
+        <h3>Offene Kommunikation & flache Hierarchien</h3>
+        <p>
+            In unserer Praxis pflegen wir einen offenen und respektvollen Umgang miteinander. Flache Hierarchien ermöglichen es jedem Teammitglied, Ideen einzubringen und Verantwortung zu übernehmen. Diese positive Arbeitsatmosphäre spüren auch Sie als Patient.
+        </p>
+
+        <p>
+            Wir legen großen Wert auf eine gute Work-Life-Balance und ein angenehmes Arbeitsklima. Nur ein zufriedenes Team kann auch zufriedene Patienten betreuen – das ist unsere Überzeugung.
+        </p>
+
+        <h3>Wir freuen uns auf Sie!</h3>
+        <p>
+            Lernen Sie unser Team persönlich kennen und überzeugen Sie sich selbst von unserer Kompetenz und Herzlichkeit. Wir sind für Sie da – mit Fachwissen, Erfahrung und einem offenen Ohr für Ihre Anliegen.
+        </p>
+
+        <div class="cta-section">
+            <h3>Vereinbaren Sie einen Termin</h3>
+            <p>Unser Team freut sich darauf, Sie kennenzulernen und Sie auf Ihrem Weg zu mehr Gesundheit zu begleiten</p>
+            <a href="index.html#kontakt" class="cta-button">Jetzt Termin vereinbaren</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hausarztpraxis Orchideenkamp</h4>
+                <p>Dr. med. Carsten Schmidt<br>
+                Neuer Bahnweg 11<br>
+                26655 Westerstede</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>Tel: (04488) 528140<br>
+                Fax: (04488) 5281429<br>
+                info@hausarztpraxis-orchideenkamp.de</p>
+            </div>
+            <div class="footer-section">
+                <h4>Sprechzeiten</h4>
+                <p>Mo-Fr: 8:00-13:00 & 15:00-18:30<br>
+                Sa: 9:00-12:00<br>
+                <small style="color: var(--accent);">Telemedizin Di: 16:30-18:30</small></p>
+            </div>
+            <div class="footer-section">
+                <h4>Rechtliches</h4>
+                <p><a href="impressum.html">Impressum</a><br>
+                <a href="datenschutz.html">Datenschutzerklärung</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Hausarztpraxis Orchideenkamp - Dr. med. Carsten Schmidt. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    
+    <!-- Medical Chatbot Widget - Embedded Frontend -->
+    <!-- Das Widget wird unten rechts auf der Website angezeigt -->
+    <div id="medical-chatbot-container" style="position: fixed; bottom: 0; right: 0; z-index: 9999; pointer-events: none;">
+        <iframe 
+          id="chatbot-iframe"
+          src="https://chatbotcarsten.live" 
+          style="
+            width: 80px;
+            height: 80px;
+            border: none;
+            background: transparent;
+            pointer-events: auto;
+          "
+          allow="microphone; camera"
+          title="Online-Rezeption Chatbot"
+          loading="lazy"
+        ></iframe>
+      </div>
+      
+      <!-- Script für automatisches Resizing des Chatbot-Widgets -->
+      <script>
+      (function() {
+          'use strict';
+          
+          const iframe = document.getElementById('chatbot-iframe');
+          if (!iframe) {
+              console.warn('Chatbot iframe not found');
+              return;
+          }
+          
+          // Größen definieren
+          const CLOSED_HEIGHT = '80px'; // Nur Button-Größe wenn geschlossen
+          const OPEN_HEIGHT = '690px'; // Höhe wenn Chat geöffnet
+          const CLOSED_WIDTH = '80px'; // Nur Button-Größe wenn geschlossen
+          const OPEN_WIDTH = '420px'; // Breite wenn Chat geöffnet
+          
+          // Initial: Geschlossen (nur Button sichtbar)
+          iframe.style.width = CLOSED_WIDTH;
+          iframe.style.height = CLOSED_HEIGHT;
+          
+          // Listen for messages from the chatbot iframe
+          window.addEventListener('message', function(event) {
+              // Check if message is from our chatbot
+              if (event.data && event.data.source === 'carsten-chatbot') {
+                  const isOpen = event.data.type === 'open';
+                  
+                  // Resize iframe based on open/close state
+                  if (isOpen) {
+                      // Chat ist geöffnet - Widget-Größe
+                      iframe.style.height = OPEN_HEIGHT;
+                      iframe.style.width = OPEN_WIDTH;
+                      iframe.style.maxWidth = 'calc(100vw - 40px)'; // Responsive auf Mobile
+                  } else {
+                      // Chat ist geschlossen - nur Button-Größe
+                      iframe.style.height = CLOSED_HEIGHT;
+                      iframe.style.width = CLOSED_WIDTH;
+                      iframe.style.maxWidth = 'none';
+                  }
+                  
+                  console.log('Chatbot state changed:', isOpen ? 'open' : 'closed');
+              }
+          });
+      })();
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EKG-Raum - Hausarztpraxis Orchideenkamp</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .image-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-box {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(0, 113, 227, 0.1);
+        }
+        
+        .feature-box i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .feature-box h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .feature-box p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    Hausarztpraxis Orchideenkamp
+                    <small>Dr. med. Carsten Schmidt</small>
+                </a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="navMenu">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="index.html#leistungen">Leistungen</a></li>
+                <li><a href="index.html#praxis">Praxisrundgang</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+                <li><a href="team.html">Unser Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Detail Hero -->
+    <div class="detail-hero">
+        <div class="detail-hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Startseite</a>
+                <span>/</span>
+                <a href="index.html#praxis">Praxisrundgang</a>
+                <span>/</span>
+                <span>EKG-Raum</span>
+            </div>
+            <h1>EKG-Raum</h1>
+            <p>Moderne Herzdiagnostik für Ihre Gesundheit</p>
+        </div>
+    </div>
+
+    <!-- Detail Content -->
+    <div class="detail-content">
+        <div class="image-container">
+            <img src="ekg.jpg" alt="Moderner EKG-Raum der Hausarztpraxis Orchideenkamp">
+        </div>
+
+        <h3>Präzise Herzdiagnostik direkt in unserer Praxis</h3>
+        <p>
+            Unser speziell ausgestatteter EKG-Raum ermöglicht eine schnelle und präzise Diagnostik Ihrer Herzfunktion. Mit modernster medizinischer Technologie können wir verschiedene Herzuntersuchungen direkt vor Ort durchführen – ohne lange Wartezeiten oder Überweisungen zu Fachärzten.
+        </p>
+
+        <p>
+            Der Raum ist hell, freundlich und funktional gestaltet. Die ruhige Atmosphäre und die moderne Ausstattung sorgen dafür, dass Sie sich während der Untersuchung wohlfühlen. Unser erfahrenes medizinisches Fachpersonal begleitet Sie durch die gesamte Untersuchung und beantwortet gerne alle Ihre Fragen.
+        </p>
+
+        <h3>Unsere EKG-Leistungen</h3>
+        <div class="features-list">
+            <div class="feature-box">
+                <i class="fas fa-heartbeat"></i>
+                <h4>Ruhe-EKG</h4>
+                <p>Standarduntersuchung zur Beurteilung der Herzfunktion im Ruhezustand – schnell und schmerzfrei</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-running"></i>
+                <h4>Belastungs-EKG</h4>
+                <p>Ergometrie zur Beurteilung der Herzfunktion unter körperlicher Belastung auf dem Fahrrad-Ergometer</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-clock"></i>
+                <h4>Langzeit-EKG</h4>
+                <p>24-Stunden-EKG zur Aufzeichnung der Herzaktivität über einen längeren Zeitraum im Alltag</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-chart-line"></i>
+                <h4>Sofortige Auswertung</h4>
+                <p>Digitale Auswertung und Befundbesprechung direkt im Anschluss an die Untersuchung</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-laptop-medical"></i>
+                <h4>Moderne Technologie</h4>
+                <p>Hochmoderne EKG-Geräte für präzise Messungen und zuverlässige Diagnosen</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-user-md"></i>
+                <h4>Erfahrenes Personal</h4>
+                <p>Durchführung und Auswertung durch qualifiziertes medizinisches Fachpersonal</p>
+            </div>
+        </div>
+
+        <h3>Wann ist ein EKG sinnvoll?</h3>
+        <p>
+            Ein Elektrokardiogramm (EKG) ist eine wichtige Untersuchung zur Beurteilung der Herzgesundheit. Wir empfehlen ein EKG bei folgenden Beschwerden oder Situationen:
+        </p>
+
+        <ul style="line-height: 2; margin: 2rem 0;">
+            <li><strong>Herzrhythmusstörungen</strong> – Unregelmäßiger Herzschlag oder Herzstolpern</li>
+            <li><strong>Brustschmerzen</strong> – Schmerzen oder Druckgefühl im Brustbereich</li>
+            <li><strong>Atemnot</strong> – Kurzatmigkeit bei Belastung oder in Ruhe</li>
+            <li><strong>Schwindel</strong> – Schwindelgefühle oder Ohnmachtsanfälle</li>
+            <li><strong>Bluthochdruck</strong> – Kontrolle bei bekanntem Bluthochdruck</li>
+            <li><strong>Vorsorge</strong> – Check-up ab 35 Jahren oder vor sportlicher Belastung</li>
+            <li><strong>Herzerkrankungen</strong> – Verlaufskontrolle bei bekannten Herzerkrankungen</li>
+            <li><strong>Operationsvorbereitung</strong> – Vor geplanten Operationen</li>
+        </ul>
+
+        <h3>Ablauf einer EKG-Untersuchung</h3>
+        <p>
+            Die EKG-Untersuchung ist völlig schmerzfrei und dauert nur wenige Minuten. Sie legen sich bequem auf unsere Untersuchungsliege, während wir kleine Elektroden an Brust, Armen und Beinen anbringen. Diese messen die elektrische Aktivität Ihres Herzens.
+        </p>
+
+        <p>
+            Bei einem Ruhe-EKG liegen Sie entspannt für etwa 2-3 Minuten. Bei einem Belastungs-EKG treten Sie auf unserem Fahrrad-Ergometer in die Pedale, während wir kontinuierlich Ihre Herzfunktion überwachen. Die Belastung wird dabei schrittweise gesteigert.
+        </p>
+
+        <p>
+            Nach der Untersuchung werten wir die Ergebnisse sofort aus und besprechen die Befunde ausführlich mit Ihnen. Bei Auffälligkeiten leiten wir umgehend weitere Schritte ein oder überweisen Sie bei Bedarf an einen Kardiologen.
+        </p>
+
+        <h3>Moderne Ausstattung</h3>
+        <p>
+            Unser EKG-Raum ist mit modernster medizinischer Technologie ausgestattet. Die digitalen EKG-Geräte ermöglichen präzise Messungen und eine sofortige computergestützte Auswertung. Die Ergebnisse werden elektronisch in Ihrer Patientenakte gespeichert und können bei Bedarf schnell mit Fachärzten geteilt werden.
+        </p>
+
+        <p>
+            Die bequeme Untersuchungsliege, die helle Beleuchtung und die ruhige Atmosphäre sorgen dafür, dass Sie sich während der Untersuchung entspannen können. Ein integrierter Waschbereich ermöglicht die hygienische Vor- und Nachbereitung der Untersuchungen.
+        </p>
+
+        <div class="info-box">
+            <h3><i class="fas fa-calendar-check"></i> Terminvereinbarung</h3>
+            <p>
+                EKG-Untersuchungen führen wir nach Terminvereinbarung durch. In dringenden Fällen können wir die Untersuchung auch kurzfristig durchführen. Bitte bringen Sie Ihre Versichertenkarte und – falls vorhanden – Vorbefunde mit. Für ein Belastungs-EKG sollten Sie bequeme Kleidung und Sportschuhe tragen.
+            </p>
+        </div>
+
+        <h3>Ihre Herzgesundheit liegt uns am Herzen</h3>
+        <p>
+            Herz-Kreislauf-Erkrankungen gehören zu den häufigsten Erkrankungen in Deutschland. Eine frühzeitige Diagnostik kann Leben retten. Mit unserer modernen EKG-Diagnostik können wir viele Herzerkrankungen frühzeitig erkennen und behandeln. Zögern Sie nicht, bei Beschwerden oder zur Vorsorge einen Termin zu vereinbaren.
+        </p>
+
+        <div class="cta-section">
+            <h3>Weitere Praxisräume entdecken</h3>
+            <p>Lernen Sie auch unsere anderen modernen Räumlichkeiten kennen</p>
+            <a href="index.html#praxis" class="cta-button">Zurück zum Praxisrundgang</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hausarztpraxis Orchideenkamp</h4>
+                <p>Dr. med. Carsten Schmidt<br>
+                Neuer Bahnweg 11<br>
+                26655 Westerstede</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>Tel: (04488) 528140<br>
+                Fax: (04488) 5281429<br>
+                info@hausarztpraxis-orchideenkamp.de</p>
+            </div>
+            <div class="footer-section">
+                <h4>Sprechzeiten</h4>
+                <p>Mo-Fr: 8:00-13:00 & 15:00-18:30<br>
+                Sa: 9:00-12:00<br>
+                <small style="color: var(--accent);">Telemedizin Di: 16:30-18:30</small></p>
+            </div>
+            <div class="footer-section">
+                <h4>Rechtliches</h4>
+                <p><a href="impressum.html">Impressum</a><br>
+                <a href="datenschutz.html">Datenschutzerklärung</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Hausarztpraxis Orchideenkamp - Dr. med. Carsten Schmidt. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    
+    <!-- Medical Chatbot Widget - Embedded Frontend -->
+    <!-- Das Widget wird unten rechts auf der Website angezeigt -->
+    <div id="medical-chatbot-container" style="position: fixed; bottom: 0; right: 0; z-index: 9999; pointer-events: none;">
+        <iframe 
+          id="chatbot-iframe"
+          src="https://chatbotcarsten.live" 
+          style="
+            width: 80px;
+            height: 80px;
+            border: none;
+            background: transparent;
+            pointer-events: auto;
+          "
+          allow="microphone; camera"
+          title="Online-Rezeption Chatbot"
+          loading="lazy"
+        ></iframe>
+      </div>
+      
+      <!-- Script für automatisches Resizing des Chatbot-Widgets -->
+      <script>
+      (function() {
+          'use strict';
+          
+          const iframe = document.getElementById('chatbot-iframe');
+          if (!iframe) {
+              console.warn('Chatbot iframe not found');
+              return;
+          }
+          
+          // Größen definieren
+          const CLOSED_HEIGHT = '80px'; // Nur Button-Größe wenn geschlossen
+          const OPEN_HEIGHT = '690px'; // Höhe wenn Chat geöffnet
+          const CLOSED_WIDTH = '80px'; // Nur Button-Größe wenn geschlossen
+          const OPEN_WIDTH = '420px'; // Breite wenn Chat geöffnet
+          
+          // Initial: Geschlossen (nur Button sichtbar)
+          iframe.style.width = CLOSED_WIDTH;
+          iframe.style.height = CLOSED_HEIGHT;
+          
+          // Listen for messages from the chatbot iframe
+          window.addEventListener('message', function(event) {
+              // Check if message is from our chatbot
+              if (event.data && event.data.source === 'carsten-chatbot') {
+                  const isOpen = event.data.type === 'open';
+                  
+                  // Resize iframe based on open/close state
+                  if (isOpen) {
+                      // Chat ist geöffnet - Widget-Größe
+                      iframe.style.height = OPEN_HEIGHT;
+                      iframe.style.width = OPEN_WIDTH;
+                      iframe.style.maxWidth = 'calc(100vw - 40px)'; // Responsive auf Mobile
+                  } else {
+                      // Chat ist geschlossen - nur Button-Größe
+                      iframe.style.height = CLOSED_HEIGHT;
+                      iframe.style.width = CLOSED_WIDTH;
+                      iframe.style.maxWidth = 'none';
+                  }
+                  
+                  console.log('Chatbot state changed:', isOpen ? 'open' : 'closed');
+              }
+          });
+      })();
+      </script>
+
+</body>
+</html>

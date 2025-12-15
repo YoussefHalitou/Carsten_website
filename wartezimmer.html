@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wartezimmer - Hausarztpraxis Orchideenkamp</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .image-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-box {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(0, 113, 227, 0.1);
+        }
+        
+        .feature-box i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .feature-box h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .feature-box p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    Hausarztpraxis Orchideenkamp
+                    <small>Dr. med. Carsten Schmidt</small>
+                </a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="navMenu">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="index.html#leistungen">Leistungen</a></li>
+                <li><a href="index.html#praxis">Praxisrundgang</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+                <li><a href="team.html">Unser Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Detail Hero -->
+    <div class="detail-hero">
+        <div class="detail-hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Startseite</a>
+                <span>/</span>
+                <a href="index.html#praxis">Praxisrundgang</a>
+                <span>/</span>
+                <span>Wartezimmer</span>
+            </div>
+            <h1>Wartezimmer</h1>
+            <p>Wohlfühlatmosphäre für entspanntes Warten</p>
+        </div>
+    </div>
+
+    <!-- Detail Content -->
+    <div class="detail-content">
+        <div class="image-gallery">
+            <div class="image-container">
+                <img src="wartezimmer.JPG" alt="Wartezimmer der Hausarztpraxis Orchideenkamp - Ansicht 1">
+            </div>
+            <div class="image-container">
+                <img src="wartezimmer1.JPG" alt="Wartezimmer der Hausarztpraxis Orchideenkamp - Ansicht 2">
+            </div>
+        </div>
+
+        <h3>Ein Ort zum Wohlfühlen</h3>
+        <p>
+            Unser Wartezimmer ist mehr als nur ein Raum zum Warten – es ist ein Ort, an dem Sie sich entspannen und wohlfühlen können. Mit seiner modernen, freundlichen Gestaltung und der ruhigen Atmosphäre möchten wir Ihnen die Wartezeit so angenehm wie möglich gestalten.
+        </p>
+
+        <p>
+            Die helle, freundliche Farbgestaltung in warmen Beigetönen schafft eine beruhigende Atmosphäre. Hochwertige Kunstwerke an den Wänden und eine durchdachte Beleuchtung sorgen für ein angenehmes Ambiente, in dem Sie sich entspannen können.
+        </p>
+
+        <h3>Ausstattung & Komfort</h3>
+        <div class="features-list">
+            <div class="feature-box">
+                <i class="fas fa-couch"></i>
+                <h4>Bequeme Sitzgelegenheiten</h4>
+                <p>Ergonomische Stühle mit Armlehnen bieten hohen Sitzkomfort auch bei längeren Wartezeiten</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-book-open"></i>
+                <h4>Aktuelle Zeitschriften</h4>
+                <p>Vielfältige Auswahl an aktuellen Zeitschriften und Magazinen für jeden Geschmack</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-sun"></i>
+                <h4>Natürliches Licht</h4>
+                <p>Große Fenster mit Tageslicht und moderne LED-Beleuchtung für angenehme Lichtverhältnisse</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-volume-mute"></i>
+                <h4>Ruhige Atmosphäre</h4>
+                <p>Schallgedämmte Räume und leise Hintergrundmusik für eine entspannte Wartezeit</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-palette"></i>
+                <h4>Kunstvolle Dekoration</h4>
+                <p>Ausgewählte Kunstwerke und Bilder schaffen eine ansprechende, beruhigende Umgebung</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-temperature-low"></i>
+                <h4>Angenehmes Klima</h4>
+                <p>Moderne Klimatisierung sorgt das ganze Jahr über für optimale Raumtemperatur</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-shield-virus"></i>
+                <h4>Hygiene & Sauberkeit</h4>
+                <p>Regelmäßige Reinigung und Desinfektion aller Oberflächen für Ihre Sicherheit</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-universal-access"></i>
+                <h4>Barrierefrei</h4>
+                <p>Ausreichend Platz für Rollstühle, Rollatoren und Kinderwagen</p>
+            </div>
+        </div>
+
+        <h3>Separate Wartebereiche</h3>
+        <p>
+            Unsere Praxis verfügt über mehrere Wartebereiche, die eine angenehme Atmosphäre auch bei höherem Patientenaufkommen gewährleisten. Die großzügige Raumaufteilung sorgt dafür, dass ausreichend Abstand zwischen den Sitzplätzen vorhanden ist.
+        </p>
+
+        <p>
+            Für Patienten mit Erkältungssymptomen steht ein separater Wartebereich zur Verfügung, um die Ansteckungsgefahr zu minimieren. So können wir allen Patienten einen sicheren und komfortablen Aufenthalt bieten.
+        </p>
+
+        <h3>Zeitschriften & Informationsmaterial</h3>
+        <p>
+            In unserem Wartezimmer finden Sie eine vielfältige Auswahl an aktuellen Zeitschriften und Magazinen. Von Gesundheitsthemen über Lifestyle bis hin zu Nachrichten – für jeden ist etwas dabei. Zusätzlich stehen Ihnen Informationsbroschüren zu verschiedenen Gesundheitsthemen zur Verfügung.
+        </p>
+
+        <div class="info-box">
+            <h3><i class="fas fa-clock"></i> Wartezeiten</h3>
+            <p>
+                Wir bemühen uns, Ihre Wartezeit so kurz wie möglich zu halten. Durch unser Terminmanagement können wir in der Regel eine Wartezeit von maximal 15-20 Minuten gewährleisten. Bei Notfällen oder unvorhergesehenen Verzögerungen bitten wir um Ihr Verständnis. Unser Team informiert Sie gerne über die voraussichtliche Wartezeit.
+            </p>
+        </div>
+
+        <h3>Ihre Privatsphäre ist uns wichtig</h3>
+        <p>
+            Die Anordnung der Sitzplätze und die Raumgestaltung sind so konzipiert, dass Gespräche am Empfang diskret geführt werden können. Vertrauliche Informationen werden ausschließlich in geschlossenen Räumen besprochen. Ihre Privatsphäre und der Schutz Ihrer persönlichen Daten haben für uns höchste Priorität.
+        </p>
+
+        <div class="cta-section">
+            <h3>Weitere Praxisräume entdecken</h3>
+            <p>Lernen Sie auch unsere anderen modernen Räumlichkeiten kennen</p>
+            <a href="index.html#praxis" class="cta-button">Zurück zum Praxisrundgang</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hausarztpraxis Orchideenkamp</h4>
+                <p>Dr. med. Carsten Schmidt<br>
+                Neuer Bahnweg 11<br>
+                26655 Westerstede</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>Tel: (04488) 528140<br>
+                Fax: (04488) 5281429<br>
+                info@hausarztpraxis-orchideenkamp.de</p>
+            </div>
+            <div class="footer-section">
+                <h4>Sprechzeiten</h4>
+                <p>Mo-Fr: 8:00-13:00 & 15:00-18:30<br>
+                Sa: 9:00-12:00<br>
+                <small style="color: var(--accent);">Telemedizin Di: 16:30-18:30</small></p>
+            </div>
+            <div class="footer-section">
+                <h4>Rechtliches</h4>
+                <p><a href="impressum.html">Impressum</a><br>
+                <a href="datenschutz.html">Datenschutzerklärung</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Hausarztpraxis Orchideenkamp - Dr. med. Carsten Schmidt. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    
+    <!-- Medical Chatbot Widget - Embedded Frontend -->
+    <!-- Das Widget wird unten rechts auf der Website angezeigt -->
+    <div id="medical-chatbot-container" style="position: fixed; bottom: 0; right: 0; z-index: 9999; pointer-events: none;">
+        <iframe 
+          id="chatbot-iframe"
+          src="https://chatbotcarsten.live" 
+          style="
+            width: 80px;
+            height: 80px;
+            border: none;
+            background: transparent;
+            pointer-events: auto;
+          "
+          allow="microphone; camera"
+          title="Online-Rezeption Chatbot"
+          loading="lazy"
+        ></iframe>
+      </div>
+      
+      <!-- Script für automatisches Resizing des Chatbot-Widgets -->
+      <script>
+      (function() {
+          'use strict';
+          
+          const iframe = document.getElementById('chatbot-iframe');
+          if (!iframe) {
+              console.warn('Chatbot iframe not found');
+              return;
+          }
+          
+          // Größen definieren
+          const CLOSED_HEIGHT = '80px'; // Nur Button-Größe wenn geschlossen
+          const OPEN_HEIGHT = '690px'; // Höhe wenn Chat geöffnet
+          const CLOSED_WIDTH = '80px'; // Nur Button-Größe wenn geschlossen
+          const OPEN_WIDTH = '420px'; // Breite wenn Chat geöffnet
+          
+          // Initial: Geschlossen (nur Button sichtbar)
+          iframe.style.width = CLOSED_WIDTH;
+          iframe.style.height = CLOSED_HEIGHT;
+          
+          // Listen for messages from the chatbot iframe
+          window.addEventListener('message', function(event) {
+              // Check if message is from our chatbot
+              if (event.data && event.data.source === 'carsten-chatbot') {
+                  const isOpen = event.data.type === 'open';
+                  
+                  // Resize iframe based on open/close state
+                  if (isOpen) {
+                      // Chat ist geöffnet - Widget-Größe
+                      iframe.style.height = OPEN_HEIGHT;
+                      iframe.style.width = OPEN_WIDTH;
+                      iframe.style.maxWidth = 'calc(100vw - 40px)'; // Responsive auf Mobile
+                  } else {
+                      // Chat ist geschlossen - nur Button-Größe
+                      iframe.style.height = CLOSED_HEIGHT;
+                      iframe.style.width = CLOSED_WIDTH;
+                      iframe.style.maxWidth = 'none';
+                  }
+                  
+                  console.log('Chatbot state changed:', isOpen ? 'open' : 'closed');
+              }
+          });
+      })();
+      </script>
+
+</body>
+</html>

@@ -287,11 +287,20 @@
      * Handle browser back/forward buttons
      */
     function handlePopState(e) {
+        // Don't handle hash changes
+        if (window.location.hash) {
+            console.log('⚓ Hash change detected, allowing normal scroll');
+            return;
+        }
+        
         if (e.state && e.state.url) {
             navigateToPage(e.state.url);
         } else {
-            // Fallback to current URL
-            navigateToPage(window.location.href);
+            // Fallback to current URL (but not for hash-only changes)
+            const currentUrl = window.location.href.split('#')[0];
+            if (e.state || currentUrl !== window.location.href) {
+                navigateToPage(currentUrl);
+            }
         }
     }
     
